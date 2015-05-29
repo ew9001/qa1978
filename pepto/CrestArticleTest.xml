@@ -8,7 +8,7 @@
     <test name="S4 Test">
         <parameter name="browser" value="mobileGalaxyS4"/>
         <classes>
-            <class name="brand.crest.AndroidCrestCart"/>
+            <class name="brand.crest.AndroidCrestArticle"/>
         </classes>
  
         <groups>
