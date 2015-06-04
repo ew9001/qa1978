@@ -45,8 +45,8 @@ public class AndroidCrestArticle {
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "cascade.csv";	
-		String data2="" + local + "/" + "cascade.csv";	
+		String data="" + local + "/" + "url_link.csv";	
+		String data2="" + local + "/" + "url_link.csv";	
 		String myTitle;
 		String csvFileToRead;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG33/ws/PageLoads";
