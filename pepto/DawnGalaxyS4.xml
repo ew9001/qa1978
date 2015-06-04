@@ -1,11 +1,11 @@
  <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
  
-<suite name="All Links Galaxy S4 Dawn Screenshots" verbose="1">
+<suite name="Add to Cart" verbose="1">
     <parameter name="param" value="Test"/>
     <test name="ObjectExitTest simple example">
-        <parameter name="browser" value="mobileGalaxyS4"/>
+        <parameter name="browser" value="safari"/>
         <classes>
-            <class name="brand.dawn.DawnAndroidLinks"/>
+            <class name="brand.pepto.AddCartTest"/>
         </classes>
  
         <groups>

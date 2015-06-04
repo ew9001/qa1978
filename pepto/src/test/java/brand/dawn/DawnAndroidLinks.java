@@ -1,4 +1,4 @@
-package brand.crest;
+package brand.dawn;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -30,7 +30,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class AndroidCrestArticle {
+public class DawnAndroidLinks {
 	private static WebDriver driver;
 	 
 	 public static final String USERNAME = "zaqwsx1";
@@ -45,8 +45,8 @@ public class AndroidCrestArticle {
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "cascade.csv";	
-		String data2="" + local + "/" + "cascade.csv";	
+		String data="" + local + "/" + "url_link.csv";	
+		String data2="" + local + "/" + "url_link.csv";	
 		String myTitle;
 		String csvFileToRead;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG33/ws/PageLoads";
