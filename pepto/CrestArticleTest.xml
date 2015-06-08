@@ -6,7 +6,7 @@
     
     
     <test name="S4 Test">
-        <parameter name="browser" value="mobileGalaxyS4"/>
+        <parameter name="browser" value="mobileiPhone5S"/>
         <classes>
             <class name="brand.crest.AndroidCrestArticle"/>
         </classes>
