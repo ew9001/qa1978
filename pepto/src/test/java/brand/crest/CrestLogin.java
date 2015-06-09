@@ -45,8 +45,8 @@ public class CrestLogin {
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "crest.csv";	
-		String data2="" + local + "/" + "crest.csv";	
+		String data="" + local + "/" + "crest_login.csv";	
+		String data2="" + local + "/" + "crest_login.csv";	
 		String myTitle;
 		String csvFileToRead;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
@@ -270,78 +270,115 @@ public class CrestLogin {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().window().maximize();
+		        driver.findElement(By.id("phsmartphoneheader_0_phsmartphoneheaderright_0_imgNavigation")).click();
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		        driver.get("http://uat.crest.pgsitecore.com/en-us/loginpage");
-		       // driver.findElement(By.linkText("Login")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
-		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
-		        takeScreenLandscape(name);
-		        System.out.println("Image Name " +name);
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopbody_0_username")).clear();
-		        driver.findElement(By.id("phdesktopbody_0_username")).sendKeys("albert.golubev@pkt.com");
-		        driver.findElement(By.id("phdesktopbody_0_password")).clear();
-		        driver.findElement(By.id("phdesktopbody_0_password")).sendKeys("zaq12wsx");
-		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
-		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
-		        takeScreenLandscape(name);
-		        System.out.println("Image Name " +name);
-		        takeScreenPortrait(name);
-		        counter+=1;
-			    
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_LogOffLink")).click();
-		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
-		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
-		        takeScreenLandscape(name);
-		        System.out.println("Image Name " +name);
-		        takeScreenPortrait(name);
-		        counter+=1;
-			    
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_anchrContinue")).click();
-		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
-		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
-		        takeScreenLandscape(name);
-		        counter+=1;
-			    
-		        System.out.println("Image Name " +name);
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		
-			     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			       
 		        
-		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
-		        {
-		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
-		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
-				        System.out.println("Image Name is  " +name);
+		        driver.get("http://crest.com/en-us/en-us/loginpage");
+		        
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        if (browser.equals("mobileGalaxyS4")||browser.equals("mobileGalaxyS4")||browser.equals("mobileHTCOneX"))
+		        {	 
+		        	  System.out.println("Inside the loop ? ");
+		        	 name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+				        takeScreenLandscape(name);
+				        System.out.println("Image Name " +name);
 				        takeScreenPortrait(name);
+				        counter+=1;
 		        }
 		        
-		        counter+=1;
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		      
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        if (browser.equals("mobileGalaxyS4")||browser.equals("mobileGalaxyS4")||browser.equals("mobileHTCOneX"))
+		        {
+		        	 name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+				        takeScreenLandscape(name);
+				        System.out.println("Image Name " +name);
+				        takeScreenPortrait(name);
+				        counter+=1;
+		        } 
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        driver.findElement(By.id("phsmartphonebody_0_username")).clear();
+		        driver.findElement(By.id("phsmartphonebody_0_username")).sendKeys("albert.golubev@pkt.com");
+		        driver.findElement(By.id("phsmartphonebody_0_password")).clear();
+		        driver.findElement(By.id("phsmartphonebody_0_password")).sendKeys("zaq12wsx");
+		        driver.findElement(By.id("phsmartphonebody_0_submit")).click();
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        if (browser.equals("mobileGalaxyS4")||browser.equals("mobileGalaxyS4"))
+		        {
+		        	 name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+				        takeScreenLandscape(name);
+				        System.out.println("Image Name " +name);
+				        takeScreenPortrait(name);
+				        counter+=1;
+		        }
+			    
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.findElement(By.id("phsmartphoneheader_0_phsmartphoneheaderright_0_imgNavigation")).click();
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        if (browser.equals("mobileGalaxyS4")||browser.equals("mobileGalaxyS4")||browser.equals("mobileHTCOneX"))
+		        {
+		        	 name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+				        takeScreenLandscape(name);
+				        System.out.println("Image Name " +name);
+				        takeScreenPortrait(name);
+				        counter+=1;
+		        }
+		        
+		        
+		        
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.get("http://crest.com/en-us/en-us/loginpage/new-logout-confirmation");
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        //driver.findElement(By.id("phsmartphonebody_0_submit")).click();
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        if (browser.equals("mobileGalaxyS4")||browser.equals("mobileGalaxyS4")||browser.equals("mobileHTCOneX"))
+		        {
+		        	 name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+				        takeScreenLandscape(name);
+				        System.out.println("Image Name " +name);
+				        takeScreenPortrait(name);
+				        counter+=1;
+		        }
+		        
+		        
+			    
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.findElement(By.id("phsmartphonebody_0_logOffContinueLink")).click();
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        if (browser.equals("mobileGalaxyS4")||browser.equals("mobileGalaxyS4")||browser.equals("mobileHTCOneX"))
+		        {
+		        	 name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+				        takeScreenLandscape(name);
+				        System.out.println("Image Name " +name);
+				        takeScreenPortrait(name);
+				        counter+=1;
+		        }
 		    
 
 		      }
@@ -467,7 +504,7 @@ public class CrestLogin {
 		 caps.setCapability("device", "Samsung Galaxy S III");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
-		 caps.setCapability("rotatable", true);
+		 caps.setCapability("emulator", true); caps.setCapability("rotatable", true);
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
@@ -495,9 +532,10 @@ public class CrestLogin {
 		 caps.setCapability("device", "Samsung Galaxy S4");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
-		 caps.setCapability("rotatable", true);
+		 caps.setCapability("emulator", true); caps.setCapability("rotatable", true);
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("deviceOrientation", "landscape");
+		 caps.setCapability("emulator", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
 	      browser_type="mobileGalaxyS4";
@@ -523,9 +561,10 @@ public class CrestLogin {
 		 caps.setCapability("device", "Samsung Galaxy S5");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
-		 caps.setCapability("rotatable", true);
+		 caps.setCapability("emulator", true); caps.setCapability("rotatable", true);
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("deviceOrientation", "landscape");
+		 iPhoneCaps.setCapability("emulator", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
 	      browser_type="mobileGalaxyS3";
@@ -551,7 +590,7 @@ public class CrestLogin {
 		 caps.setCapability("device", "Samsung Galaxy S5 Mini");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
-		 caps.setCapability("rotatable", true);
+		 caps.setCapability("emulator", true); caps.setCapability("rotatable", true);
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
@@ -859,7 +898,7 @@ public class CrestLogin {
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("browserstack.local", "true");
 		 iPhoneCaps.setCapability("acceptSslCerts", "true");
-		 
+		 iPhoneCaps.setCapability("emulator", "true");
 
 
 		 
@@ -887,6 +926,7 @@ public class CrestLogin {
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		 iPhoneCaps.setCapability("browserstack.local", "true");
 		 iPhoneCaps.setCapability("acceptSslCerts", "true");
+		 iPhoneCaps.setCapability("emulator", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5S");
@@ -1096,8 +1136,8 @@ public class CrestLogin {
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
-		//  System.out.println("Let me Rotate ");
-		//((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+		  System.out.println("Let me Rotate ");
+		((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	     System.out.println("I want to rotate");
@@ -1122,8 +1162,8 @@ public class CrestLogin {
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
-		//  System.out.println("Let me Rotate ");
-	//	((Rotatable)augmentedDriver).rotate(ScreenOrientation.PORTRAIT);
+		  System.out.println("Let me Rotate ");
+		((Rotatable)augmentedDriver).rotate(ScreenOrientation.PORTRAIT);
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	     System.out.println("I want to rotate");
