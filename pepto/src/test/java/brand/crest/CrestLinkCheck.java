@@ -256,6 +256,13 @@ public class CrestLinkCheck {
 		        System.out.println("The URL is " + url);	
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
 		       
 		       // for (int second = 0;; second++) {
 			    //	if (second >= 60);
@@ -281,33 +288,7 @@ public class CrestLinkCheck {
 			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			        
 			        
-			        WebElement box = driver.findElement(By.xpath("//*[@id='content-body-wrapper']/div[2]"));
-					List <WebElement> allLinks = box.findElements(By.tagName("a"));
-					System.out.println("Total links ----> " + allLinks.size());
-					
-					//print the name of all links in a particular section and clicking on them
-					//we have to use a for loop to step through our 'box' or 'array' of items
-					
-					for(int i=0; i<allLinks.size(); i++){
-						System.out.println(allLinks.get(i).getText());
-						allLinks.get(i).click();
-						System.out.println(driver.getTitle());
-					//	s = String.valueOf(i);
-						actualTitle = driver.getTitle();
-						System.out.println(actualTitle);
-						//take screenshots
-						name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-				        takeScreenPortrait(name);
-				        System.out.println("Image Name " +name);
-				        counter+=1;
-				        driver.get(url);
-						
-						//build cache - because array is temporarily saved in cache then cleaned when we navigate away
-						box = driver.findElement(By.xpath("//*[@id='content-body-wrapper']/div[2]"));   //*
-						allLinks = box.findElements(By.tagName("a"));
-						System.out.println("*************************");
-					}
-
+			       
 			        
 			        
 			        
