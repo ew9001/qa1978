@@ -58,7 +58,7 @@ public class AlignDesktopScreen {
 		  
 		  if (browser.equals("mobileGalaxyS3")) {
 			  driver=mobileGalaxyS3();
-			  csvFileToRead = data;
+			  csvFileToRead = data2;
 			  
 			}
 		  
@@ -138,12 +138,12 @@ public class AlignDesktopScreen {
 		  
 		  else if (browser.equals("mobileiPhone5S")) {
 			  driver=mobileiPhone5S();
-			   csvFileToRead = data;
+			   csvFileToRead = data2;
 			}
 		  
 		  else if (browser.equals("mobileiPhone5")) {
 			  driver=mobileiPhone5();
-			   csvFileToRead = data;
+			   csvFileToRead = data2;
 			}
 		  
 		  else if (browser.equals("mobileiPhone5C")) {
@@ -158,7 +158,7 @@ public class AlignDesktopScreen {
 		  
 		  else if (browser.equals("mobileiPhone4S")) {
 			  driver=mobileiPhone4S();
-			  csvFileToRead = data;
+			  csvFileToRead = data2;
 			}
 		  
 		  else if (browser.equals("mobileHTCEveo3d")) {
