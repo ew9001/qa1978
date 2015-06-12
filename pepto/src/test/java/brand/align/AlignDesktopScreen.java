@@ -351,6 +351,7 @@ public class AlignDesktopScreen {
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
+		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE11");
 	      browser_type="browserIE11";
@@ -464,6 +465,7 @@ public class AlignDesktopScreen {
 		 caps.setCapability("rotatable", true);
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("deviceOrientation", "landscape");
+		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
 	      browser_type="mobileGalaxyS4";
@@ -492,6 +494,7 @@ public class AlignDesktopScreen {
 		 caps.setCapability("rotatable", true);
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("deviceOrientation", "landscape");
+		 caps.setCapability("emulator", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
 	      browser_type="mobileGalaxyS3";
@@ -826,7 +829,8 @@ public class AlignDesktopScreen {
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("browserstack.local", "true");
 		 iPhoneCaps.setCapability("acceptSslCerts", "true");
-		 
+		 iPhoneCaps.setCapability("browserstack.local", "true");
+		 iPhoneCaps.setCapability("emulator", "true");
 
 
 		 
@@ -854,6 +858,8 @@ public class AlignDesktopScreen {
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		 iPhoneCaps.setCapability("browserstack.local", "true");
 		 iPhoneCaps.setCapability("acceptSslCerts", "true");
+		 iPhoneCaps.setCapability("browserstack.local", "true");
+		 iPhoneCaps.setCapability("emulator", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5S");
@@ -875,6 +881,7 @@ public class AlignDesktopScreen {
 		 iPhoneCaps.setCapability("rotatable", true);
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		 iPhoneCaps.setCapability("acceptSslCerts", "true");
+		 iPhoneCaps.setCapability("emulator", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5");
@@ -897,6 +904,7 @@ public class AlignDesktopScreen {
 		 iPhoneCaps.setCapability("rotatable", true);
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		 iPhoneCaps.setCapability("acceptSslCerts", "true");
+		 iPhoneCaps.setCapability("emulator", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5C");
