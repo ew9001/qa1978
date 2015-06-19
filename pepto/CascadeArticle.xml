@@ -8,7 +8,7 @@
     <test name="Print on browser Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="brand.cascade.CascadeArticlePrint"/>
+            <class name="brand.cascade.CascadeArticlesPrint"/>
         </classes>
  
         <groups>
@@ -21,7 +21,7 @@
     <test name="Print on browser  IE10">
         <parameter name="browser" value="browserIE10"/>
         <classes>
-            <class name="brand.cascade.CascadeArticlePrint"/>
+            <class name="brand.cascade.CascadeArticlesPrint"/>
         </classes>
  
         <groups>
@@ -34,7 +34,7 @@
     <test name="Print on browser IE11">
         <parameter name="browser" value="browserIE11"/>
         <classes>
-            <class name="brand.cascade.CascadeArticlePrint"/>
+            <class name="brand.cascade.CascadeArticlesPrint"/>
         </classes>
  
         <groups>
