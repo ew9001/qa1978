@@ -310,9 +310,9 @@ public class CascadeWriteReview {
 
 		        
 		        
-	//	        WebElement click1 = driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptSecondaryRatingWrite_imgSecondaryRatingStarsOn_0"));
+	        WebElement click1 = driver.findElement(By.id("id=phdesktopbody_0_phdesktopproductratingreview_0_rptProductRating_rblControlForProductRating_0_0_0"));
 
-	//	        click1.click();
+	        click1.click();
 		  
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
@@ -323,7 +323,7 @@ public class CascadeWriteReview {
 		//        WebElement click2 = driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptSecondaryRatingWrite_imgSecondaryRatingStarsOn_1"));
 
 		  //      click2.click();
-		        driver.findElement(By.id("id=phdesktopbody_0_phdesktopproductratingreview_0_rptProductRating_rblControlForProductRating_0_0_0")).click();
+		   //     driver.findElement(By.id("id=phdesktopbody_0_phdesktopproductratingreview_0_rptProductRating_rblControlForProductRating_0_0_0")).click();
 		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProductReview_txtControlForProductReview_0")).clear();
 		        myTitle = driver.getTitle();
 		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProductReview_txtControlForProductReview_0")).sendKeys("QA area  " +timeStamp );
