@@ -1,4 +1,4 @@
-package brand.swiffer;
+package brand.cascade;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,10 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Rotatable;
-import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.Augmenter;
@@ -30,7 +27,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class SwifferLogin {
+public class CascadeArticlesPrint {
 	private static WebDriver driver;
 	 
 	 public static final String USERNAME = "zaqwsx1";
@@ -40,13 +37,13 @@ public class SwifferLogin {
 	 
 	  public String browser_type;
 	  public String fail,error,url,rotate;
-	  public String baseUrl = "http://uat.charmin.pgsitecore.com/en-us";
-	  
+	  public String baseUrl = "http://stage.coffee-mate.com";
+		
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "swiffer.csv";	
-		String data2="" + local + "/" + "swiffer.csv";	
+		String data="" + local + "/" + "cascadeArticle.csv";	
+		String data2="" + local + "/" + "cascadeArticle.csv";	
 		String myTitle;
 		String csvFileToRead;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
@@ -232,7 +229,7 @@ public class SwifferLogin {
 			  
 		 
 		  System.out.println("Let me run get driver "+driver);
-		  fail="/Error/"+ browser+"/Failed/" + timeStamp + "_" + "page_error.png";
+		  fail=""+ browser+"/Failed/" + timeStamp + "_" + "contact_us.png";
 			 
 		  
 		  
@@ -264,54 +261,8 @@ public class SwifferLogin {
 			    	//Thread.sleep(1000);
 			    //} changed
 		        
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		     
-		  
+		       
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().window().maximize();
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		        driver.findElement(By.linkText("Sign In")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
-		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
-		        takeScreenLandscape(name);
-		        System.out.println("Image Name " +name);
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopbody_0_username")).clear();
-		        driver.findElement(By.id("phdesktopbody_0_username")).sendKeys("albert.golubev@pkt.com");
-		        driver.findElement(By.id("phdesktopbody_0_password")).clear();
-		        driver.findElement(By.id("phdesktopbody_0_password")).sendKeys("zaq12wsx");
-		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
-		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
-		        takeScreenLandscape(name);
-		        System.out.println("Image Name " +name);
-		        takeScreenPortrait(name);
-		        counter+=1;
-			    
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_LogOffLink")).click();
-		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
-		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
-		        takeScreenLandscape(name);
-		        System.out.println("Image Name " +name);
-		        takeScreenPortrait(name);
-		        counter+=1;
-			    
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_anchrContinue")).click();
-		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -319,28 +270,26 @@ public class SwifferLogin {
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
-		        takeScreenLandscape(name);
-		        counter+=1;
-			    
-		        System.out.println("Image Name " +name);
-		        takeScreenPortrait(name);
+		        counter+=1; 
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		
+		 
 			     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			       
-		        
-		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
+			     driver.findElement(By.id("phdesktopbody_0_phdesktopprint_0_anchrPrint")).click(); 
+			     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+			        takeScreenPortrait(name);
+			        System.out.println("Image Name " +name);
+			        counter+=1; 
+		        if (browser.equals("mobileGalaxyS4")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
 		        {
-		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
-		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
-				        System.out.println("Image Name is  " +name);
-				        takeScreenPortrait(name);
+		        	name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+			        takeScreenPortrait(name);
+			        System.out.println("Image Name " +name);
+			        
 		        }
 		        
-		        counter+=1;
+		        counter+=1; 
 		    
 
 		      }
@@ -582,7 +531,7 @@ public class SwifferLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
-	      driver.get("http://publicisna.com/");
+	      driver.get("http://yahoo.com");
 	      
 	      return driver;
 	 }
@@ -839,7 +788,7 @@ public class SwifferLogin {
 		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Firefox");
-	      driver.get("http://publicisna.com/");
+	      driver.get("http://yahoo.com");
 	      driver.manage().window().maximize();
 	      return driver;
 	 }
@@ -1012,9 +961,9 @@ public class SwifferLogin {
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "Safari");
-		 caps.setCapability("browser_version", "8.0");
+		 caps.setCapability("browser_version", "6.1");
 		 caps.setCapability("os", "OS X");
-		 caps.setCapability("os_version", "Yosemite");
+		 caps.setCapability("os_version", "Mountain Lion");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
@@ -1022,7 +971,7 @@ public class SwifferLogin {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
 	      driver.manage().window().maximize();
-	      driver.get("http://publicisna.com/");
+	      driver.get("http://yahoo.com");
 	      
 	      return driver;
 	   
@@ -1045,7 +994,7 @@ public class SwifferLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
-	      driver.get("http://publicisna.com/");
+	      driver.get("http://yahoo.com");
 	      
 	      return driver;
 	   
@@ -1064,7 +1013,7 @@ public class SwifferLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Ipad");
-	      driver.get("http://publicisna.com/");
+	      driver.get("http://yahoo.com");
 	      
 	      return driver;
 	   
@@ -1083,7 +1032,7 @@ public class SwifferLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Android");
-	      driver.get("http://publicisna.com/");
+	      driver.get("http://yahoo.com");
 	      
 	      return driver;
 	   
@@ -1162,5 +1111,4 @@ public class SwifferLogin {
 	
 	 } 
 	 }
-
 }
