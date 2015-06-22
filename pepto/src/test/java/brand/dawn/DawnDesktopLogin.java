@@ -582,7 +582,7 @@ public class DawnDesktopLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      
 	      return driver;
 	 }
@@ -839,7 +839,7 @@ public class DawnDesktopLogin {
 		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Firefox");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      driver.manage().window().maximize();
 	      return driver;
 	 }
@@ -1022,7 +1022,7 @@ public class DawnDesktopLogin {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
 	      driver.manage().window().maximize();
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      
 	      return driver;
 	   
@@ -1045,7 +1045,7 @@ public class DawnDesktopLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      
 	      return driver;
 	   
@@ -1064,7 +1064,7 @@ public class DawnDesktopLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Ipad");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      
 	      return driver;
 	   
@@ -1083,7 +1083,7 @@ public class DawnDesktopLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Android");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      
 	      return driver;
 	   
