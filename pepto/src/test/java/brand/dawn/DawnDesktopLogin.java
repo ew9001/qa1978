@@ -49,7 +49,7 @@ public class DawnDesktopLogin {
 		String data2="" + local + "/" + "dawn.csv";	
 		String myTitle;
 		String csvFileToRead;
-	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
+	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads1";
 	  @Test(groups = {"create"})
 		@Parameters({"browser"})
 	  @BeforeClass
