@@ -1,4 +1,4 @@
-package brand.cascade;
+package brand.dawn;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,14 +14,13 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Rotatable;
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -31,7 +30,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class CascadeWriteReview {
+public class DawnDesktopLogin {
 	private static WebDriver driver;
 	 
 	 public static final String USERNAME = "zaqwsx1";
@@ -41,16 +40,15 @@ public class CascadeWriteReview {
 	 
 	  public String browser_type;
 	  public String fail,error,url,rotate;
-	
+	  public String baseUrl = "http://uat.charmin.pgsitecore.com/en-us";
 	  
-		static String timeStamp = new SimpleDateFormat("HHmmss").format(Calendar.getInstance().getTime());
+		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "cascadProducts.csv";	
-		String data2="" + local + "/" + "cascadProducts.csv";	
+		String data="" + local + "/" + "dawn.csv";	
+		String data2="" + local + "/" + "dawn.csv";	
 		String myTitle;
 		String csvFileToRead;
-		String myTitles ="part of PG Family ";
 	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
 	  @Test(groups = {"create"})
 		@Parameters({"browser"})
@@ -86,7 +84,7 @@ public class CascadeWriteReview {
 		  else if (browser.equals("mobileGalaxyS2")) {
 			  driver=  mobileGalaxyS2();
 			  csvFileToRead = data2;
-			  System.out.println("Data is gone  " +data2);
+			  System.out.println("Data is  " +data2);
 			}
 		  
 		  else if (browser.equals("mobileGalaxyS4")) {
@@ -258,13 +256,8 @@ public class CascadeWriteReview {
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        System.out.println("The URL is " + url);	
 		        System.out.println("Image Name " +name);
-		       // driver.manage().window().maximize();
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.get(url);
-		    
+		       
 		       // for (int second = 0;; second++) {
 			    //	if (second >= 60);
 			    	//try { if ("Â© 2014 Procter & Gamble".equals(driver.findElement(By.cssSelector("div.copyRights > div.text.mode1 > div")).getText())) break; } catch (Exception e) {}
@@ -277,89 +270,35 @@ public class CascadeWriteReview {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		     
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        
-		        driver.findElement(By.id("lnkWriteReview")).click();
+		        driver.manage().window().maximize();
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.findElement(By.linkText("Login")).click();
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
-		        counter+=1;
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        System.out.println("Image Name " +name);
+		        takeScreenPortrait(name);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        
-		        WebElement click = driver.findElement(By.xpath("//*[@id='phdesktopbody_0_phdesktopproductratingreview_0_imgRatingStars']"));
-
-		        click.click();
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, 3000)"); //y value '250' can be altered
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.findElement(By.id("phdesktopbody_0_username")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_username")).sendKeys("albert.golubev@pkt.com");
+		        driver.findElement(By.id("phdesktopbody_0_password")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_password")).sendKeys("zaq12wsx");
+		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
-		        counter+=1;
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-
-		        
-		        
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProductRating_rblControlForProductRating_0_0_0")).click();
-		  
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        
-		//        WebElement click2 = driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptSecondaryRatingWrite_imgSecondaryRatingStarsOn_1"));
-
-		  //      click2.click();
-		   //     driver.findElement(By.id("id=phdesktopbody_0_phdesktopproductratingreview_0_rptProductRating_rblControlForProductRating_0_0_0")).click();
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProductReview_txtControlForProductReview_0")).clear();
-		        myTitle = driver.getTitle();
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProductReview_txtControlForProductReview_0")).sendKeys("QA area  " +timeStamp );
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProductReview_textareaControlForProductReview_1")).clear();
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProductReview_textareaControlForProductReview_1")).sendKeys("Why do we need this product. You will like this product. I've used this product for over a year now.");
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProfileInformation_txtControl_0")).clear();
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProfileInformation_txtControl_0")).sendKeys("albert" +timeStamp);
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProfileInformation_txtControl_1")).clear();
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProfileInformation_txtControl_1")).sendKeys("Brooklyn, NY");
-		        new Select(driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProfileInformation_ddlControl_2"))).selectByVisibleText("10");
-		        new Select(driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProfileInformation_ddlControl_3"))).selectByVisibleText("1978");
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProfileInformation_txtControl_4")).clear();
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProfileInformation_txtControl_4")).sendKeys("albert.golubev@pkt.com");
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_chkAgree")).click();
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_ibtnPreview")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
-		        System.out.println("Image Name " +name);
-		        counter+=1;
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-
-		        JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, -90000)"); //y value '250' can be altered
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
-		 
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
 		        takeScreenLandscape(name);
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
 		        counter+=1;
 			    
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        
-		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_LogOffLink")).click();
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
@@ -369,56 +308,37 @@ public class CascadeWriteReview {
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
 		        counter+=1;
+			    
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_anchrContinue")).click();
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		       // assertTrue(isElementPresent(By.id("phdesktopbody_0_phdesktopproductratingreview_0_ibtnSubmit")));
-		        
-		        
-		        WebElement herbBtn = driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_ibtnSubmit"));
-
-		        Assert.assertEquals(true, herbBtn.isDisplayed());
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_ibtnSubmit")).click();
-		      
-		        
-		        
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Desktop_S.png";
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
 		        counter+=1;
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-
 			    
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        jse.executeScript("scroll(0, -90000)"); //y value '250' can be altered
+		
 			     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			//     WebElement contBtn = driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_ibtnContinue"));
-
-		//	        Assert.assertEquals(true, contBtn.isDisplayed()); 
-		//	     driver.findElement(By.id("id=phdesktopbody_0_phdesktopproductratingreview_0_ibtnContinue")).click();
+			       
 		        
-			     
-			     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Desktop_Continue_Swiffer.png";
-			        takeScreenPortrait(name);
-			        System.out.println("Image Name " +name);
-			        counter+=1;
-			        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-
-				    
-			        System.out.println("Image Name " +name);
-			        takeScreenPortrait(name);
-			        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-			
-				     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
+		        {
+		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
+		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
+		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
+				        System.out.println("Image Name is  " +name);
+				        takeScreenPortrait(name);
+		        }
 		        
 		        counter+=1;
 		    
@@ -481,7 +401,7 @@ public class CascadeWriteReview {
 	 public WebDriver browserIE10() throws MalformedURLException  
 	 {  
 	  
-		 System.out.println("Let me run IE10");
+		 System.out.println("Let me run mobileGalaxyS3");
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "IE");
@@ -497,7 +417,7 @@ public class CascadeWriteReview {
 	      browser_type="browserIE10";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://yahoo.com");
+	      driver.get("http://nhl.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
@@ -919,7 +839,7 @@ public class CascadeWriteReview {
 		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Firefox");
-	      driver.get("http://yahoo.com");
+	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
 	      driver.manage().window().maximize();
 	      return driver;
 	 }
@@ -1092,9 +1012,9 @@ public class CascadeWriteReview {
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "Safari");
-		 caps.setCapability("browser_version", "8.0");
+		 caps.setCapability("browser_version", "6.1");
 		 caps.setCapability("os", "OS X");
-		 caps.setCapability("os_version", "Yosemite");
+		 caps.setCapability("os_version", "Mountain Lion");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
@@ -1183,12 +1103,16 @@ public class CascadeWriteReview {
 	    
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		  
-		  //  myTitle = driver.getTitle();
+		    myTitle = driver.getTitle();
 		    
 		    
-		//   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
-		 
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    FileUtils.copyFile(screenshot, new File(name));
 		    
 		    return driver;
@@ -1205,14 +1129,18 @@ public class CascadeWriteReview {
 	    
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		  
-		//    myTitle = driver.getTitle();
+		    myTitle = driver.getTitle();
 		    
 		    
-		//    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
-		  
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    FileUtils.copyFile(screenshot, new File(name));
-		   
+		    
 		    return driver;
 	 }
 	
