@@ -297,8 +297,23 @@ public class DawnDesktopLogin {
 		        takeScreenPortrait(name);
 		        counter+=1;
 			    
+		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0_HlinkEdit")).click();
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        System.out.println("Image Name " +name);
+		        takeScreenPortrait(name);
+		        counter+=1;
+		        
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_LogOffLink")).click();
+		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_1_LogOffLink")).click();
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
