@@ -5,7 +5,7 @@
     
     
     
-    <test name="Review on browser Firefox 34">
+    <test name="Review on browser Firefox 35">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="brand.cascade.CascadeWriteReview"/>
