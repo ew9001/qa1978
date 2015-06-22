@@ -347,8 +347,8 @@ public class CascadeWriteReview {
 		        counter+=1;
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 
-		        JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, -90000)"); //y value '250' can be altered
+		        JavascriptExecutor jse1 = (JavascriptExecutor)driver;
+		        jse1.executeScript("scroll(0, -90000)"); //y value '250' can be altered
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
 		 
