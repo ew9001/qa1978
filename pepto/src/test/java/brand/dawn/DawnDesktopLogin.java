@@ -325,7 +325,7 @@ public class DawnDesktopLogin {
 		        counter+=1;
 			    
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_anchrContinue")).click();
+		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_1_anchrContinue")).click();
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
