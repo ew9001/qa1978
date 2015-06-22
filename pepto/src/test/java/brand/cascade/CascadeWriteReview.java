@@ -310,9 +310,7 @@ public class CascadeWriteReview {
 
 		        
 		        
-	        WebElement click1 = driver.findElement(By.id("id=phdesktopbody_0_phdesktopproductratingreview_0_rptProductRating_rblControlForProductRating_0_0_0"));
-
-	        click1.click();
+		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_rptProductRating_rblControlForProductRating_0_0_0")).click();
 		  
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
