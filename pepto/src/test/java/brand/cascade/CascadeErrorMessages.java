@@ -288,7 +288,7 @@ public class CascadeErrorMessages {
 			     
 			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			        
-			        driver.findElement(By.id("lnkWriteReview")).click();
+			        driver.findElement(By.id("lnkWriteReviewPopup")).click();
 			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			        
