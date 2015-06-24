@@ -418,10 +418,16 @@ public class DawnDesktopLogin {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        counter+=1;
 		        driver.findElement(By.id("phdesktopbody_0_password")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_password")).sendKeys("zaq");
 		        
-		        driver.findElement(By.id(" phdesktopbody_0$ResetSubmitBtn")).click();
+		        driver.findElement(By.id("phdesktopbody_0_ResetSubmitBtn")).click();
 		        
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -438,7 +444,7 @@ public class DawnDesktopLogin {
 		        driver.findElement(By.id("phdesktopbody_0_password")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_password")).sendKeys("zaq12wsx");
 		        
-		        driver.findElement(By.id(" phdesktopbody_0$ResetSubmitBtn")).click();
+		        driver.findElement(By.id("phdesktopbody_0$ResetSubmitBtn")).click();
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
