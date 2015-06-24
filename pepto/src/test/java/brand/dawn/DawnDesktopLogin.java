@@ -375,6 +375,43 @@ public class DawnDesktopLogin {
 		        driver.get("https://int.dawn.pgsitecore.com/en-us/resetpasswordpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        driver.findElement(By.id(" phdesktopbody_0$LoginSubmitBtn")).click();
+		        
+		        
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        counter+=1;
+		        
+		        
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        driver.findElement(By.id("phdesktopbody_0$username")).clear();
+		        driver.findElement(By.id("phdesktopbody_0$username")).sendKeys("albert.golubev@pkt.com");
+		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0$zipcode")).clear();
+		        driver.findElement(By.id("phdesktopbody_0$zipcode")).sendKeys("11235");
+		        
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        driver.findElement(By.id(" phdesktopbody_0$LoginSubmitBtn")).click();
+		        
+		        
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        counter+=1;
+		        
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        
 		        driver.findElement(By.id("phdesktopbody_0_ResetSubmitBtn")).click();
