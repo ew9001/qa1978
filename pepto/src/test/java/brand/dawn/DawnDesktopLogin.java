@@ -285,13 +285,18 @@ public class DawnDesktopLogin {
 		        takeScreenPortrait(name);
 		        
 		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		      
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        System.out.println("Take picture of an error ");
 		        
-		        
-		        
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful- Error - Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful- Error - Completed-Capture-landscape.png";
 		        takeScreenLandscape(name);
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
