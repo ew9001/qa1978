@@ -1154,9 +1154,9 @@ public class DawnDesktopLogin {
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
 		    //assign key board object
-		       Keyboard keyboard=((HasInputDevices) driver).getKeyboard();
+		    //   Keyboard keyboard=((HasInputDevices) driver).getKeyboard();
 		       //enter a key
-		       keyboard.pressKey(Keys.ENTER);
+		     //  keyboard.pressKey(Keys.ENTER);
 	      
 	      return driver;
 	   
