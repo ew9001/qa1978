@@ -375,7 +375,7 @@ public class DawnDesktopLogin {
 		        driver.get("https://int.dawn.pgsitecore.com/en-us/resetpasswordpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.findElement(By.id("phdesktopbody_0_LoginSubmitBtn")).click();
 		        
 		        
