@@ -1,5 +1,7 @@
 package brand.dawn;
 
+import java.awt.AWTException;
+import java.awt.Robot;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -1158,6 +1160,14 @@ public class DawnDesktopLogin {
 		       //enter a key
 		     //  keyboard.pressKey(Keys.ENTER);
 	      
+		    try {
+		        (new Robot()).keyPress(java.awt.event.KeyEvent.VK_ENTER);
+
+		         (new Robot()).keyRelease(java.awt.event.KeyEvent.VK_ENTER);
+		         } catch (AWTException e) {
+		                // TODO Auto-generated catch block
+		                e.printStackTrace();
+		            }
 	      return driver;
 	   
 	    

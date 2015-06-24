@@ -1,5 +1,7 @@
 package brand.cascade;
 
+import java.awt.AWTException;
+import java.awt.Robot;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -13,11 +15,14 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Rotatable;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.HasInputDevices;
+import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -45,11 +50,11 @@ public class CascadeDesktopLogin {
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "cascade.csv";	
-		String data2="" + local + "/" + "cascade.csv";	
+		String data="" + local + "/" + "dawn.csv";	
+		String data2="" + local + "/" + "dawn.csv";	
 		String myTitle;
 		String csvFileToRead;
-	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
+	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads1";
 	  @Test(groups = {"create"})
 		@Parameters({"browser"})
 	  @BeforeClass
@@ -266,7 +271,7 @@ public class CascadeDesktopLogin {
 		        
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		     
-		  
+		        driver.get("http://int.cascadeclean.pgsitecore.com");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -275,10 +280,28 @@ public class CascadeDesktopLogin {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        driver.findElement(By.linkText("Login")).click();
+		        
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
 		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        System.out.println("Image Name " +name);
+		        takeScreenPortrait(name);
+		        
+		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		      
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        System.out.println("Take picture of an error ");
+		        
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful- Error - Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful- Error - Completed-Capture-landscape.png";
 		        takeScreenLandscape(name);
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
@@ -297,8 +320,23 @@ public class CascadeDesktopLogin {
 		        takeScreenPortrait(name);
 		        counter+=1;
 			    
+		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0_HlinkEdit")).click();
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        System.out.println("Image Name " +name);
+		        takeScreenPortrait(name);
+		        counter+=1;
+		        
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_LogOffLink")).click();
+		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_1_LogOffLink")).click();
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
@@ -310,7 +348,7 @@ public class CascadeDesktopLogin {
 		        counter+=1;
 			    
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_anchrContinue")).click();
+		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_1_anchrContinue")).click();
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -339,8 +377,89 @@ public class CascadeDesktopLogin {
 				        System.out.println("Image Name is  " +name);
 				        takeScreenPortrait(name);
 		        }
+		        driver.get("http://int.cascadeclean.pgsitecore.com/en-us/resetpasswordpage");
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.findElement(By.id("phdesktopbody_0_LoginSubmitBtn")).click();
 		        
+		        
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
 		        counter+=1;
+		        
+		        
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        driver.findElement(By.id("phdesktopbody_0_username")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_username")).sendKeys("albert.golubev@pkt.com");
+		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0_zipcode")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_zipcode")).sendKeys("11235");
+		        
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        driver.findElement(By.id("phdesktopbody_0_LoginSubmitBtn")).click();
+		        
+		        
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        counter+=1;
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        driver.findElement(By.id("phdesktopbody_0_ResetSubmitBtn")).click();
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        counter+=1;
+		        driver.findElement(By.id("phdesktopbody_0_password")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_password")).sendKeys("zaq");
+		        
+		        driver.findElement(By.id("phdesktopbody_0_ResetSubmitBtn")).click();
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        counter+=1;
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        driver.findElement(By.id("phdesktopbody_0_password")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_password")).sendKeys("zaq12wsx");
+		        
+		        driver.findElement(By.id("phdesktopbody_0_ResetSubmitBtn")).click();
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        counter+=1;
+		        
 		    
 
 		      }
@@ -384,6 +503,7 @@ public class CascadeDesktopLogin {
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
+		 caps.setCapability("browserstack.localIdentifier", "Cascade");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE11");
 	      browser_type="browserIE11";
@@ -412,6 +532,7 @@ public class CascadeDesktopLogin {
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
+		 caps.setCapability("browserstack.localIdentifier", "Cascade");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE10");
 	      browser_type="browserIE10";
@@ -440,6 +561,7 @@ public class CascadeDesktopLogin {
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
+		 caps.setCapability("browserstack.localIdentifier", "Cascade");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome 39 MAC OS");
 	      browser_type="browserChrome39";
@@ -582,7 +704,7 @@ public class CascadeDesktopLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      
 	      return driver;
 	 }
@@ -837,9 +959,12 @@ public class CascadeDesktopLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("browserstack.localIdentifier", "Cascade");
+		 
+		
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Firefox");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      driver.manage().window().maximize();
 	      return driver;
 	 }
@@ -1012,18 +1137,37 @@ public class CascadeDesktopLogin {
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "Safari");
-		 caps.setCapability("browser_version", "6.1");
+		 caps.setCapability("browser_version", "8.0");
 		 caps.setCapability("os", "OS X");
-		 caps.setCapability("os_version", "Mountain Lion");
+		 caps.setCapability("os_version", "Yosemite");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
+		 caps.setCapability("browserstack.localIdentifier", "Cascade");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
 	      driver.manage().window().maximize();
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("https://int.dawn.pgsitecore.com/en-us/resetpasswordpage");
+	      driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    //assign key board object
+		    //   Keyboard keyboard=((HasInputDevices) driver).getKeyboard();
+		       //enter a key
+		     //  keyboard.pressKey(Keys.ENTER);
 	      
+		    try {
+		        (new Robot()).keyPress(java.awt.event.KeyEvent.VK_ENTER);
+
+		         (new Robot()).keyRelease(java.awt.event.KeyEvent.VK_ENTER);
+		         } catch (AWTException e) {
+		                // TODO Auto-generated catch block
+		                e.printStackTrace();
+		            }
 	      return driver;
 	   
 	    
@@ -1045,7 +1189,7 @@ public class CascadeDesktopLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      
 	      return driver;
 	   
@@ -1064,7 +1208,7 @@ public class CascadeDesktopLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Ipad");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      
 	      return driver;
 	   
@@ -1083,7 +1227,7 @@ public class CascadeDesktopLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Android");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://msn.com");
 	      
 	      return driver;
 	   
