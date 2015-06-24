@@ -945,6 +945,9 @@ public class DawnDesktopLogin {
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("browserstack.localIdentifier", "Firefox");
+		 
+		
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Firefox");
 	      driver.get("http://msn.com");
