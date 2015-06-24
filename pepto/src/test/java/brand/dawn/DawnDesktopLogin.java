@@ -395,8 +395,8 @@ public class DawnDesktopLogin {
 		        driver.findElement(By.id("phdesktopbody_0_username")).sendKeys("albert.golubev@pkt.com");
 		        
 		        
-		        driver.findElement(By.id("phdesktopbody_0zipcode")).clear();
-		        driver.findElement(By.id("phdesktopbody_0zipcode")).sendKeys("11235");
+		        driver.findElement(By.id("phdesktopbody_0_zipcode")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_zipcode")).sendKeys("11235");
 		        
 		        
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
