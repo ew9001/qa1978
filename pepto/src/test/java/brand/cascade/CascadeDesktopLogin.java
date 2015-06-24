@@ -451,7 +451,7 @@ public class CascadeDesktopLogin {
 		        
 		        
 		        
-		        driver.findElement(By.id("phdesktopbody_0_checkboxrememberme")).click();
+		        //driver.findElement(By.id("phdesktopbody_0_checkboxrememberme")).click();
 		        
 		        driver.findElement(By.id("phdesktopbody_0_zipcode")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_zipcode")).sendKeys("11235");
