@@ -336,7 +336,7 @@ public class CascadeDesktopLogin {
 		        counter+=1;
 		        
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_1_LogOffLink")).click();
+		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_LogOffLink")).click();
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
@@ -503,7 +503,7 @@ public class CascadeDesktopLogin {
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
-		 caps.setCapability("browserstack.localIdentifier", "Cascade");
+		 caps.setCapability("browserstack.1Identifier", "Cascade");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE11");
 	      browser_type="browserIE11";
