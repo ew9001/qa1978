@@ -391,12 +391,12 @@ public class DawnDesktopLogin {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        
-		        driver.findElement(By.id("phdesktopbody_0$username")).clear();
-		        driver.findElement(By.id("phdesktopbody_0$username")).sendKeys("albert.golubev@pkt.com");
+		        driver.findElement(By.id("phdesktopbody_0_username")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_username")).sendKeys("albert.golubev@pkt.com");
 		        
 		        
-		        driver.findElement(By.id("phdesktopbody_0$zipcode")).clear();
-		        driver.findElement(By.id("phdesktopbody_0$zipcode")).sendKeys("11235");
+		        driver.findElement(By.id("phdesktopbody_0zipcode")).clear();
+		        driver.findElement(By.id("phdesktopbody_0zipcode")).sendKeys("11235");
 		        
 		        
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -418,7 +418,7 @@ public class DawnDesktopLogin {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        
-		        driver.findElement(By.id("phdesktopbody_0$password")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_password")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_password")).sendKeys("zaq");
 		        
 		        driver.findElement(By.id(" phdesktopbody_0$ResetSubmitBtn")).click();
@@ -435,7 +435,7 @@ public class DawnDesktopLogin {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        
-		        driver.findElement(By.id("phdesktopbody_0$password")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_password")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_password")).sendKeys("zaq12wsx");
 		        
 		        driver.findElement(By.id(" phdesktopbody_0$ResetSubmitBtn")).click();
