@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
@@ -1145,6 +1146,7 @@ public class CascadeDesktopLogin {
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("browserstack.localIdentifier", "Cascade");
+		 caps.setCapability("chrome.switches", Arrays.asList("--ignore-certificate-errors"));
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
 	      driver.manage().window().maximize();
