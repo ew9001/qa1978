@@ -272,6 +272,53 @@ public class CascadeDesktopLogin {
 		        
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		     
+		        
+		        
+		        driver.get("http://author.cascadeclean.pgsitecore.com/en-us/create-profile");
+		        
+		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
+		        
+		        
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        System.out.println("Image Name " +name);
+		        takeScreenPortrait(name);
+		        
+		        counter+=1;
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).sendKeys("al@@");
+		        driver.findElement(By.id("showpassword")).click();
+		        
+		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[firstname]")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[firstname]")).sendKeys("A@");
+		        
+		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[lastname]")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[lastname]")).sendKeys("A@");
+		        driver.findElement(By.id("showpassword")).click();
+		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
+		        
+		        
+
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        System.out.println("Image Name " +name);
+		        takeScreenPortrait(name);
+		        
+		        counter+=1;
+		        
 		        driver.get("http://int.cascadeclean.pgsitecore.com");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -401,6 +448,9 @@ public class CascadeDesktopLogin {
 		        driver.findElement(By.id("phdesktopbody_0_username")).sendKeys("albert.golubev@pkt.com");
 		        
 		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0_checkboxrememberme")).click();
+		        
 		        driver.findElement(By.id("phdesktopbody_0_zipcode")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_zipcode")).sendKeys("11235");
 		        
@@ -446,7 +496,7 @@ public class CascadeDesktopLogin {
 		        counter+=1;
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        
+		        driver.findElement(By.id("showpassword")).click();
 		        driver.findElement(By.id("phdesktopbody_0_password")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_password")).sendKeys("zaq12wsx");
 		        
