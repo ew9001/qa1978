@@ -402,7 +402,7 @@ public class DawnDesktopLogin {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        
-		        driver.findElement(By.id(" phdesktopbody_0$LoginSubmitBtn")).click();
+		        driver.findElement(By.id("phdesktopbody_0_LoginSubmitBtn")).click();
 		        
 		        
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
