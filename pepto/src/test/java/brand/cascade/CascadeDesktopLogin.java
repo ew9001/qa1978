@@ -14,9 +14,11 @@ import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Rotatable;
 import org.openqa.selenium.ScreenOrientation;
@@ -1212,14 +1214,29 @@ public class CascadeDesktopLogin {
 		       //enter a key
 		     //  keyboard.pressKey(Keys.ENTER);
 	      
-		    try {
-		        (new Robot()).keyPress(java.awt.event.KeyEvent.VK_ENTER);
+		    try 
+		    {
+		        //Handle the alert pop-up using seithTO alert statement
+		        Alert alert = driver.switchTo().alert();
 
-		         (new Robot()).keyRelease(java.awt.event.KeyEvent.VK_ENTER);
-		         } catch (AWTException e) {
-		                // TODO Auto-generated catch block
-		                e.printStackTrace();
-		            }
+		        //Print alert is present
+		        System.out.println("Alert is present");
+
+		        //get the message which is present on pop-up
+		        String message = alert.getText();
+
+		        //print the pop-up message
+		        System.out.println(message);
+
+		        alert.sendKeys("");
+		        //Click on OK button on pop-up
+		        alert.accept();
+		    } 
+		    catch (NoAlertPresentException e) 
+		    {
+		        //if alert is not present print message
+		        System.out.println("alert is not present");
+		    }
 	      return driver;
 	   
 	    

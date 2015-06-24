@@ -3,7 +3,18 @@
 <suite name="Browser Print " verbose="1">
     <parameter name="param" value="Test"/>
     
-    
+      <test name="Print on browser Safari">
+        <parameter name="browser" value="safari"/>
+        <classes>
+            <class name="brand.cascade.CascadeDesktopLogin"/>
+        </classes>
+ 
+        <groups>
+            <run>
+                <include name="create"/>
+            </run>
+        </groups>
+    </test>
     
     <test name="Print on browser Firefox">
         <parameter name="browser" value="firefox"/>
@@ -57,18 +68,7 @@
         </groups>
     </test>
     
-         <test name="Print on browser Safari">
-        <parameter name="browser" value="safari"/>
-        <classes>
-            <class name="brand.cascade.CascadeDesktopLogin"/>
-        </classes>
- 
-        <groups>
-            <run>
-                <include name="create"/>
-            </run>
-        </groups>
-    </test>
+       
     
     
 </suite>
