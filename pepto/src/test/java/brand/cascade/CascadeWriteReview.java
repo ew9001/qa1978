@@ -286,9 +286,11 @@ public class CascadeWriteReview {
 		     
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        
-		        driver.findElement(By.id("lnkWriteReview")).click();
+		        driver.findElement(By.id("lnkWriteReviewPopup")).click();
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_ibtnPreview")).click();
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
