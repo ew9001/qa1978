@@ -291,6 +291,19 @@ public class DawnWriteReview {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        
 		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductratingreview_0_ibtnPreview")).click();
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        driver.get("http://int.author.dawn.pgsitecore.com/en-us/products/by-line/apple-blossom-scent");
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
