@@ -302,6 +302,11 @@ public class DawnWriteReview {
 		        
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+                driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        driver.findElement(By.id("lnkWriteReviewPopup")).click();
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
