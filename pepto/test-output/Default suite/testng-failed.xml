@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="mobile.test.CrestLinks">
+      <class name="mobile.test.iPhoneTestRun">
         <methods>
-          <include name="run"/>
+          <include name="setUp"/>
+          <include name="measurePerformance"/>
         </methods>
-      </class> <!-- mobile.test.CrestLinks -->
+      </class> <!-- mobile.test.iPhoneTestRun -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

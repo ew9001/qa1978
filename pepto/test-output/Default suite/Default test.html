@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 21 14:10:25 EDT 2015</td>
+<td>Started on:</td><td>Tue Jun 30 11:22:31 EDT 2015</td>
 </tr>
-<tr><td>Total time:</td><td>51 seconds (51787 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (415 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,248 +68,156 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='mobile.test.CrestLinks.run()'><b>run</b><br>Test class: mobile.test.CrestLinks</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
-e: blocklist is disabled
-1432231832251	addons.xpi-utils	DEBUG	Make addon app-profile:fxdriver@googlecode.com visible
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
-1432231832253	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	addons.xpi	DEBUG	New add-on web2pdfextension@web2pdf.adobedotcom installed in app-system-local
-1432231832255	addons.xpi-utils	DEBUG	Make addon app-system-local:web2pdfextension@web2pdf.adobedotcom visible
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832257	addons.xpi	DEBUG	Updating database with changes to installed add-ons
-1432231832257	addons.xpi-utils	DEBUG	Updating add-on states
-1432231832257	addons.xpi-utils	DEBUG	Writing add-ons list
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-1432231832428	DeferredSave.extensions.json	DEBUG	Starting timer
-1432231832455	DeferredSave.extensions.json	DEBUG	Starting write
-1432231832457	addons.manager	DEBUG	shutdown
-1432231832457	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
-1432231832458	addons.xpi	DEBUG	shutdown
-1432231832458	addons.xpi-utils	DEBUG	shutdown
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for OpenH264Provider
-1432231832459	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
-1432231832492	DeferredSave.extensions.json	DEBUG	Write succeeded
-1432231832492	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 16
-1432231832492	addons.xpi	DEBUG	Notifying XPI shutdown observers
-1432231832494	addons.manager	DEBUG	Async provider shutdown done
-1432231832800	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: [&quot;XPIProvider&quot;]
-1432231832801	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: [&quot;LightweightThemeManager&quot;]
-1432231832803	addons.xpi	DEBUG	startup
-1432231832803	addons.xpi	INFO	Mapping web2pdfextension@web2pdf.adobedotcom to /Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom
-1432231832804	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
-1432231832804	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to /Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
-1432231832804	addons.xpi	INFO	Mapping fxdriver@googlecode.com to /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/fxdriver@googlecode.com
-1432231832804	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/webdriver-staging
-1432231832804	addons.xpi	DEBUG	checkForChanges
-1432231832807	addons.xpi	DEBUG	No changes found
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-*** Blocklist::_preloadBlocklistFile: blocklist is disabled
-1432231833505	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
-
+<td title='mobile.test.iPhoneTestRun.setUp()'><b>setUp</b><br>Test class: mobile.test.iPhoneTestRun</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
 Build info: version: &apos;2.37.0&apos;, revision: &apos;a7c61cbd68657e133ae96672cf995890bad2ee42&apos;, time: &apos;2013-10-18 09:51:02&apos;
-System info: host: &apos;usnycpww4300&apos;, ip: &apos;10.6.6.142&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.7.0_51&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:120)
-	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:110)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:195)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:190)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:186)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:99)
-	at mobile.test.CrestLinks.run(CrestLinks.java:49)
+System info: host: &apos;usnycpww4300&apos;, ip: &apos;169.254.126.133&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: IPhoneDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:111)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:129)
+	at org.openqa.selenium.iphone.IPhoneDriver.&lt;init&gt;(IPhoneDriver.java:80)
+	at org.openqa.selenium.iphone.IPhoneDriver.&lt;init&gt;(IPhoneDriver.java:91)
+	at org.openqa.selenium.iphone.IPhoneDriver.&lt;init&gt;(IPhoneDriver.java:100)
+	at mobile.test.iPhoneTestRun.setUp(iPhoneTestRun.java:16)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
-e: blocklist is disabled
-1432231832251	addons.xpi-utils	DEBUG	Make addon app-profile:fxdriver@googlecode.com visible
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
-1432231832253	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	addons.xpi	DEBUG	New add-on web2pdfextension@web2pdf.adobedotcom installed in app-system-local
-1432231832255	addons.xpi-utils	DEBUG	Make addon app-system-local:web2pdfextension@web2pdf.adobedotcom visible
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832257	addons.xpi	DEBUG	Updating database with changes to installed add-ons
-1432231832257	addons.xpi-utils	DEBUG	Updating add-on states
-1432231832257	addons.xpi-utils	DEBUG	Writing add-ons list
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-1432231832428	DeferredSave.extensions.json	DEBUG	Starting timer
-1432231832455	DeferredSave.extensions.json	DEBUG	Starting write
-1432231832457	addons.manager	DEBUG	shutdown
-1432231832457	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
-1432231832458	addons.xpi	DEBUG	shutdown
-1432231832458	addons.xpi-utils	DEBUG	shutdown
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for OpenH264Provider
-1432231832459	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
-1432231832492	DeferredSave.extensions.json	DEBUG	Write succeeded
-1432231832492	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 16
-1432231832492	addons.xpi	DEBUG	Notifying XPI shutdown observers
-1432231832494	addons.manager	DEBUG	Async provider shutdown done
-1432231832800	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: [&quot;XPIProvider&quot;]
-1432231832801	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: [&quot;LightweightThemeManager&quot;]
-1432231832803	addons.xpi	DEBUG	startup
-1432231832803	addons.xpi	INFO	Mapping web2pdfextension@web2pdf.adobedotcom to /Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom
-1432231832804	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
-1432231832804	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to /Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
-1432231832804	addons.xpi	INFO	Mapping fxdriver@googlecode.com to /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/fxdriver@googlecode.com
-1432231832804	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/webdriver-staging
-1432231832804	addons.xpi	DEBUG	checkForChanges
-1432231832807	addons.xpi	DEBUG	No changes found
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-*** Blocklist::_preloadBlocklistFile: blocklist is disabled
-1432231833505	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
-
-	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:108)
-	... 9 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace762671735", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace762671735'><pre>org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
-e: blocklist is disabled
-1432231832251	addons.xpi-utils	DEBUG	Make addon app-profile:fxdriver@googlecode.com visible
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
-1432231832253	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	addons.xpi	DEBUG	New add-on web2pdfextension@web2pdf.adobedotcom installed in app-system-local
-1432231832255	addons.xpi-utils	DEBUG	Make addon app-system-local:web2pdfextension@web2pdf.adobedotcom visible
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832257	addons.xpi	DEBUG	Updating database with changes to installed add-ons
-1432231832257	addons.xpi-utils	DEBUG	Updating add-on states
-1432231832257	addons.xpi-utils	DEBUG	Writing add-ons list
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-1432231832428	DeferredSave.extensions.json	DEBUG	Starting timer
-1432231832455	DeferredSave.extensions.json	DEBUG	Starting write
-1432231832457	addons.manager	DEBUG	shutdown
-1432231832457	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
-1432231832458	addons.xpi	DEBUG	shutdown
-1432231832458	addons.xpi-utils	DEBUG	shutdown
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for OpenH264Provider
-1432231832459	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
-1432231832492	DeferredSave.extensions.json	DEBUG	Write succeeded
-1432231832492	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 16
-1432231832492	addons.xpi	DEBUG	Notifying XPI shutdown observers
-1432231832494	addons.manager	DEBUG	Async provider shutdown done
-1432231832800	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: [&quot;XPIProvider&quot;]
-1432231832801	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: [&quot;LightweightThemeManager&quot;]
-1432231832803	addons.xpi	DEBUG	startup
-1432231832803	addons.xpi	INFO	Mapping web2pdfextension@web2pdf.adobedotcom to /Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom
-1432231832804	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
-1432231832804	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to /Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
-1432231832804	addons.xpi	INFO	Mapping fxdriver@googlecode.com to /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/fxdriver@googlecode.com
-1432231832804	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/webdriver-staging
-1432231832804	addons.xpi	DEBUG	checkForChanges
-1432231832807	addons.xpi	DEBUG	No changes found
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-*** Blocklist::_preloadBlocklistFile: blocklist is disabled
-1432231833505	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
-
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:319)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:298)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	... 31 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace53881443", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace53881443'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
 Build info: version: &apos;2.37.0&apos;, revision: &apos;a7c61cbd68657e133ae96672cf995890bad2ee42&apos;, time: &apos;2013-10-18 09:51:02&apos;
-System info: host: &apos;usnycpww4300&apos;, ip: &apos;10.6.6.142&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.7.0_51&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:120)
-	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:110)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:195)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:190)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:186)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:99)
-	at mobile.test.CrestLinks.run(CrestLinks.java:49)
+System info: host: &apos;usnycpww4300&apos;, ip: &apos;169.254.126.133&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: IPhoneDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:111)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:129)
+	at org.openqa.selenium.iphone.IPhoneDriver.&lt;init&gt;(IPhoneDriver.java:80)
+	at org.openqa.selenium.iphone.IPhoneDriver.&lt;init&gt;(IPhoneDriver.java:91)
+	at org.openqa.selenium.iphone.IPhoneDriver.&lt;init&gt;(IPhoneDriver.java:100)
+	at mobile.test.iPhoneTestRun.setUp(iPhoneTestRun.java:16)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
-e: blocklist is disabled
-1432231832251	addons.xpi-utils	DEBUG	Make addon app-profile:fxdriver@googlecode.com visible
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
-1432231832253	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	addons.xpi	DEBUG	New add-on web2pdfextension@web2pdf.adobedotcom installed in app-system-local
-1432231832255	addons.xpi-utils	DEBUG	Make addon app-system-local:web2pdfextension@web2pdf.adobedotcom visible
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832257	addons.xpi	DEBUG	Updating database with changes to installed add-ons
-1432231832257	addons.xpi-utils	DEBUG	Updating add-on states
-1432231832257	addons.xpi-utils	DEBUG	Writing add-ons list
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-1432231832428	DeferredSave.extensions.json	DEBUG	Starting timer
-1432231832455	DeferredSave.extensions.json	DEBUG	Starting write
-1432231832457	addons.manager	DEBUG	shutdown
-1432231832457	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
-1432231832458	addons.xpi	DEBUG	shutdown
-1432231832458	addons.xpi-utils	DEBUG	shutdown
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for OpenH264Provider
-1432231832459	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
-1432231832492	DeferredSave.extensions.json	DEBUG	Write succeeded
-1432231832492	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 16
-1432231832492	addons.xpi	DEBUG	Notifying XPI shutdown observers
-1432231832494	addons.manager	DEBUG	Async provider shutdown done
-1432231832800	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: [&quot;XPIProvider&quot;]
-1432231832801	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: [&quot;LightweightThemeManager&quot;]
-1432231832803	addons.xpi	DEBUG	startup
-1432231832803	addons.xpi	INFO	Mapping web2pdfextension@web2pdf.adobedotcom to /Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom
-1432231832804	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
-1432231832804	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to /Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
-1432231832804	addons.xpi	INFO	Mapping fxdriver@googlecode.com to /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/fxdriver@googlecode.com
-1432231832804	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/webdriver-staging
-1432231832804	addons.xpi	DEBUG	checkForChanges
-1432231832807	addons.xpi	DEBUG	No changes found
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-*** Blocklist::_preloadBlocklistFile: blocklist is disabled
-1432231833505	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
-
-	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:108)
-	... 9 more
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:319)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:298)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	... 31 more
 </pre></div></td>
-<td>51</td>
-<td>mobile.test.CrestLinks@7efcf7e3</td></tr>
+<td>0</td>
+<td>mobile.test.iPhoneTestRun@27b62aab</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='mobile.test.iPhoneTestRun.tearDown()'><b>tearDown</b><br>Test class: mobile.test.iPhoneTestRun</td>
+<td></td>
+<td>0</td>
+<td>mobile.test.iPhoneTestRun@27b62aab</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='mobile.test.iPhoneTestRun.measurePerformance()'><b>measurePerformance</b><br>Test class: mobile.test.iPhoneTestRun</td>
+<td></td>
+<td>0</td>
+<td>mobile.test.iPhoneTestRun@27b62aab</td></tr>
 </table><p>
 </body>
 </html>

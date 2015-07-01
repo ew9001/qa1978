@@ -308,6 +308,12 @@ public class DawnAddCartDesktop {
 			        takeScreenPortrait(name);
 			        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        
+			        
+			        
+			        driver.findElement(By.id("imgCloseButton")).click();
+			        
+			        
+			        
 		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
 		        {
 		        	JavascriptExecutor jse = (JavascriptExecutor)driver;

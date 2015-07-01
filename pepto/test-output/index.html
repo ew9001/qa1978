@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-skipped">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content skipped suite-Default_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="mobile.test.CrestLinks" hash-for-method="run">run</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="mobile.test.iPhoneTestRun" hash-for-method="measurePerformance">measurePerformance</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,142 +116,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">mobile.test.CrestLinks</span>
+              <img src="skipped.png"/>
+              <span class="class-name">mobile.test.iPhoneTestRun</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="run">
-                  </a> <!-- run -->
-                  <span class="method-name">run</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
-e: blocklist is disabled
-1432231832251	addons.xpi-utils	DEBUG	Make addon app-profile:fxdriver@googlecode.com visible
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
-1432231832253	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	addons.xpi	DEBUG	New add-on web2pdfextension@web2pdf.adobedotcom installed in app-system-local
-1432231832255	addons.xpi-utils	DEBUG	Make addon app-system-local:web2pdfextension@web2pdf.adobedotcom visible
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832257	addons.xpi	DEBUG	Updating database with changes to installed add-ons
-1432231832257	addons.xpi-utils	DEBUG	Updating add-on states
-1432231832257	addons.xpi-utils	DEBUG	Writing add-ons list
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-1432231832428	DeferredSave.extensions.json	DEBUG	Starting timer
-1432231832455	DeferredSave.extensions.json	DEBUG	Starting write
-1432231832457	addons.manager	DEBUG	shutdown
-1432231832457	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
-1432231832458	addons.xpi	DEBUG	shutdown
-1432231832458	addons.xpi-utils	DEBUG	shutdown
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for OpenH264Provider
-1432231832459	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
-1432231832492	DeferredSave.extensions.json	DEBUG	Write succeeded
-1432231832492	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 16
-1432231832492	addons.xpi	DEBUG	Notifying XPI shutdown observers
-1432231832494	addons.manager	DEBUG	Async provider shutdown done
-1432231832800	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: [&quot;XPIProvider&quot;]
-1432231832801	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: [&quot;LightweightThemeManager&quot;]
-1432231832803	addons.xpi	DEBUG	startup
-1432231832803	addons.xpi	INFO	Mapping web2pdfextension@web2pdf.adobedotcom to /Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom
-1432231832804	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
-1432231832804	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to /Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
-1432231832804	addons.xpi	INFO	Mapping fxdriver@googlecode.com to /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/fxdriver@googlecode.com
-1432231832804	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/webdriver-staging
-1432231832804	addons.xpi	DEBUG	checkForChanges
-1432231832807	addons.xpi	DEBUG	No changes found
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-*** Blocklist::_preloadBlocklistFile: blocklist is disabled
-1432231833505	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
-
-Build info: version: &apos;2.37.0&apos;, revision: &apos;a7c61cbd68657e133ae96672cf995890bad2ee42&apos;, time: &apos;2013-10-18 09:51:02&apos;
-System info: host: &apos;usnycpww4300&apos;, ip: &apos;10.6.6.142&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.7.0_51&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:120)
-	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:110)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:195)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:190)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:186)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:99)
-	at mobile.test.CrestLinks.run(CrestLinks.java:49)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
-e: blocklist is disabled
-1432231832251	addons.xpi-utils	DEBUG	Make addon app-profile:fxdriver@googlecode.com visible
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832252	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
-1432231832253	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832253	addons.xpi	DEBUG	New add-on web2pdfextension@web2pdf.adobedotcom installed in app-system-local
-1432231832255	addons.xpi-utils	DEBUG	Make addon app-system-local:web2pdfextension@web2pdf.adobedotcom visible
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832255	DeferredSave.extensions.json	DEBUG	Save changes
-1432231832257	addons.xpi	DEBUG	Updating database with changes to installed add-ons
-1432231832257	addons.xpi-utils	DEBUG	Updating add-on states
-1432231832257	addons.xpi-utils	DEBUG	Writing add-ons list
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832260	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832261	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-1432231832428	DeferredSave.extensions.json	DEBUG	Starting timer
-1432231832455	DeferredSave.extensions.json	DEBUG	Starting write
-1432231832457	addons.manager	DEBUG	shutdown
-1432231832457	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
-1432231832458	addons.xpi	DEBUG	shutdown
-1432231832458	addons.xpi-utils	DEBUG	shutdown
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
-1432231832458	addons.manager	DEBUG	Calling shutdown blocker for OpenH264Provider
-1432231832459	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
-1432231832492	DeferredSave.extensions.json	DEBUG	Write succeeded
-1432231832492	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 16
-1432231832492	addons.xpi	DEBUG	Notifying XPI shutdown observers
-1432231832494	addons.manager	DEBUG	Async provider shutdown done
-1432231832800	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: [&quot;XPIProvider&quot;]
-1432231832801	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: [&quot;LightweightThemeManager&quot;]
-1432231832803	addons.xpi	DEBUG	startup
-1432231832803	addons.xpi	INFO	Mapping web2pdfextension@web2pdf.adobedotcom to /Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom
-1432231832804	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
-1432231832804	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to /Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
-1432231832804	addons.xpi	INFO	Mapping fxdriver@googlecode.com to /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/fxdriver@googlecode.com
-1432231832804	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: /var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/anonymous3825441780281773481webdriver-profile/extensions/webdriver-staging
-1432231832804	addons.xpi	DEBUG	checkForChanges
-1432231832807	addons.xpi	DEBUG	No changes found
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1432231832810	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
-1432231832811	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-*** Blocklist::_preloadBlocklistFile: blocklist is disabled
-1432231833505	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
-
-	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:108)
-	... 9 more
-
-</div> <!-- stack-trace -->
+                  <a name="measurePerformance">
+                  </a> <!-- measurePerformance -->
+                  <span class="method-name">measurePerformance</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-skipped -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/testng-eclipse-1489457314/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/gd/k5lsk02s4gdbr4f350qydgwnxp8pg6/T/testng-eclipse-2055107158/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -260,7 +143,7 @@ e: blocklist is disabled
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;mobile.test.CrestLinks&quot;/&gt;
+      &lt;class name=&quot;mobile.test.iPhoneTestRun&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -302,14 +185,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'run')
-data.setCell(0, 2, 'mobile.test.CrestLinks')
-data.setCell(0, 3, 51765);
+data.setCell(0, 1, 'measurePerformance')
+data.setCell(0, 2, 'mobile.test.iPhoneTestRun')
+data.setCell(0, 3, 7);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 51 seconds</span>
+              <span class="suite-total-time">Total running time: 7 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -335,12 +218,16 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">mobile.test.CrestLinks</div> <!-- chronological-class-name -->
-              <div class="test-method">
+              <div class="chronological-class-name">mobile.test.iPhoneTestRun</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">run</span>
+                <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">measurePerformance</span>
+                <span class="method-start">401 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
