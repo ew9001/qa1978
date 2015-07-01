@@ -335,7 +335,7 @@ public class DawnAddCartDesktop {
 				        System.out.println("Image Name is 1  " +name);
 				        takeScreenPortrait(name);
 		        }
-		        
+		        System.out.println("Edit Button");
 		        //driver.findElement(By.linkText("Edit")).click();
 		        driver.findElement(By.className("edit-btn btn")).click();
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
