@@ -310,7 +310,7 @@ public class DawnAddCartDesktop {
 		        
 			        
 			        
-			        driver.findElement(By.id("imgCloseButton")).click();
+			     //   driver.findElement(By.id("imgCloseButton")).click();
 			        
 			        
 			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -332,7 +332,7 @@ public class DawnAddCartDesktop {
 		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
 		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
-				        System.out.println("Image Name is  " +name);
+				        System.out.println("Image Name is 1  " +name);
 				        takeScreenPortrait(name);
 		        }
 		        
