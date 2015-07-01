@@ -313,6 +313,18 @@ public class DawnAddCartDesktop {
 			        driver.findElement(By.id("imgCloseButton")).click();
 			        
 			        
+			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Cart-portrait.png";
+			        takeScreenPortrait(name);
+			        System.out.println("Image Name " +name);
+			        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Cart-landscape.png";
+			        takeScreenLandscape(name);
+			        System.out.println("Image Name " +name);
+			        takeScreenPortrait(name);
+			        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+			        counter+=1;
 			        
 		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
 		        {
@@ -324,8 +336,39 @@ public class DawnAddCartDesktop {
 				        takeScreenPortrait(name);
 		        }
 		        
+		        //driver.findElement(By.linkText("Edit")).click();
+		        driver.findElement(By.className("edit-btn btn")).click();
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Cart-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Cart-landscape.png";
+		        takeScreenLandscape(name);
+		        System.out.println("Image Name " +name);
+		        takeScreenPortrait(name);
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		       
+		        
 		        counter+=1;
-		    
+		        
+                driver.findElement(By.linkText("Remove")).click();
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Cart-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Cart-landscape.png";
+		        takeScreenLandscape(name);
+		        System.out.println("Image Name " +name);
+		        takeScreenPortrait(name);
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		       
+		        
+		        counter+=1;
 
 		      }
 	
