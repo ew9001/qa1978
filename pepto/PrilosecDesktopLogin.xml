@@ -1,7 +1,7 @@
  <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
  
 <suite name="Browser Print " verbose="1">
-    <parameter name="param" value="Test"/>
+    <parameter name="param" value="Test1"/>
     
       <test name="Print on browser Safari">
         <parameter name="browser" value="safari"/>
