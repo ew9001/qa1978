@@ -434,7 +434,7 @@ public class PrilosecDesktopLogin {
 				        System.out.println("Image Name is  " +name);
 				        takeScreenPortrait(name);
 		        }
-		        driver.get("http://author.prilosecotc.pgsitecore.com/en-us/resetpasswordpage");
+		        driver.get("http://author.prilosecotc.pgsitecore.com/en-us/reset-password");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
