@@ -328,7 +328,7 @@ public class PrilosecDesktopLogin {
 		        
 		        counter+=1;
 		        
-		        driver.get("http://int.cascadeclean.pgsitecore.com");
+		        driver.get("http://author.prilosecotc.pgsitecore.com");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -563,7 +563,7 @@ public class PrilosecDesktopLogin {
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
-		 caps.setCapability("browserstack.1Identifier", "Cascade");
+		 caps.setCapability("browserstack.1Identifier", "Prilosec");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE11");
 	      browser_type="browserIE11";
