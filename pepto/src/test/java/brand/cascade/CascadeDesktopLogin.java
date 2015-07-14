@@ -328,7 +328,7 @@ public class CascadeDesktopLogin {
 		        
 		        counter+=1;
 		        
-		        driver.get("http://int.cascadeclean.pgsitecore.com");
+		        driver.get("http://cascadeclean.pgsitecore.com");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -434,7 +434,7 @@ public class CascadeDesktopLogin {
 				        System.out.println("Image Name is  " +name);
 				        takeScreenPortrait(name);
 		        }
-		        driver.get("http://int.cascadeclean.pgsitecore.com/en-us/resetpasswordpage");
+		        driver.get("http://cascadeclean.pgsitecore.com/en-us/resetpasswordpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
