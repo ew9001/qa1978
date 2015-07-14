@@ -328,7 +328,7 @@ public class PrilosecDesktopLogin {
 		        
 		        counter+=1;
 		        
-		        driver.get("http://author.prilosecotc.pgsitecore.com");
+		        driver.get("http://author.prilosecotc.pgsitecore.com/en-us/loginpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -336,7 +336,7 @@ public class PrilosecDesktopLogin {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		        driver.findElement(By.linkText("Login")).click();
+		        //driver.findElement(By.linkText("Login")).click();
 		        
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
