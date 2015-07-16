@@ -3,8 +3,8 @@
 <suite name="Browser Print " verbose="1">
     <parameter name="param" value="Test"/>
     
-     <test name="Screen grab on browser  tabletIpad4thGen7">
-        <parameter name="browser" value="tabletIpad4thGen7"/>
+     <test name="Print on browser Safari">
+        <parameter name="browser" value="safari"/>
         <classes>
             <class name="brand.align.AlignDesktopScreen"/>
         </classes>
@@ -16,7 +16,7 @@
         </groups>
     </test>
     
-    <test name="Screen grab on browser Firefox">
+    <test name="Print on browser Firefox 35">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="brand.align.AlignDesktopScreen"/>
@@ -29,7 +29,7 @@
         </groups>
     </test>
     
-    <test name="Screen grab on browser  IE10">
+    <test name="Print on browser  IE10">
         <parameter name="browser" value="browserIE10"/>
         <classes>
             <class name="brand.align.AlignDesktopScreen"/>
@@ -42,7 +42,7 @@
         </groups>
     </test>
     
-    <test name="Screen grab on browser IE11">
+    <test name="Print on browser IE11">
         <parameter name="browser" value="browserIE11"/>
         <classes>
             <class name="brand.align.AlignDesktopScreen"/>
@@ -55,11 +55,21 @@
         </groups>
     </test>
     
-     
+     <test name="Print on browser Chrome">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="brand.align.AlignDesktopScreen"/>
+        </classes>
+ 
+        <groups>
+            <run>
+                <include name="create"/>
+            </run>
+        </groups>
+    </test>
     
-    
-    
-   
+        
     
     
 </suite>
+ 
