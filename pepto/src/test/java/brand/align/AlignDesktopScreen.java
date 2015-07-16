@@ -45,7 +45,7 @@ public class AlignDesktopScreen {
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
 		String data="" + local + "/" + "align_desktop.csv";	
-		String data2="" + local + "/" + "mobile_align.csv";	
+		String data2="" + local + "/" + "align_desktop.csv";	
 		String myTitle,actualTitle;
 		String csvFileToRead;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
