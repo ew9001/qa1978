@@ -981,7 +981,7 @@ public class DawnDesktopLogin {
 		 iPhoneCaps.setCapability("platform", "MAC");
 		 iPhoneCaps.setCapability("device", "iPhone 4S");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
-		 iPhoneCaps.setCapability("browserstack.local", "true");
+		// iPhoneCaps.setCapability("browserstack.local", "true");
 		 iPhoneCaps.setCapability("acceptSslCerts", "true");
 		 
 
@@ -1009,7 +1009,7 @@ public class DawnDesktopLogin {
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
-		 iPhoneCaps.setCapability("browserstack.local", "true");
+		// iPhoneCaps.setCapability("browserstack.local", "true");
 		 iPhoneCaps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
@@ -1073,7 +1073,7 @@ public class DawnDesktopLogin {
 		 iPhoneCaps.setCapability("device", "LG Nexus 4");
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
-		 iPhoneCaps.setCapability("browserstack.local", "true");
+		// iPhoneCaps.setCapability("browserstack.local", "true");
 		 iPhoneCaps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
