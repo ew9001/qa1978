@@ -377,7 +377,7 @@ public class DawnDesktopLogin {
 				        System.out.println("Image Name is  " +name);
 				        takeScreenPortrait(name);
 		        }
-		        driver.get("https://int.dawn.pgsitecore.com/en-us/resetpasswordpage");
+		        driver.get("https://dawn-dish.com/en-us/resetpasswordpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -624,7 +624,7 @@ public class DawnDesktopLogin {
 	      browser_type="mobileGalaxyS4";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://uat.metawellness.pgsitecore.com/en-us");
+	      driver.get("https://dawn-dish.com/en-us/resetpasswordpage");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
@@ -652,7 +652,7 @@ public class DawnDesktopLogin {
 	      browser_type="mobileGalaxyS3";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://uat.metawellness.pgsitecore.com/en-us");
+	      driver.get("http://dawn-dish.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
@@ -680,7 +680,7 @@ public class DawnDesktopLogin {
 	      browser_type="mobileGalaxyS3";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://uat.metawellness.pgsitecore.com/en-us");
+	      driver.get("http://dawn-dish.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
