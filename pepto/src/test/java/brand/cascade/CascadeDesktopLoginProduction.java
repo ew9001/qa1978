@@ -136,7 +136,7 @@ public class CascadeDesktopLoginProduction {
 		     
 		        
 		        
-		        driver.get("http://author.cascadeclean.com/en-us/create-profile");
+		        driver.get("http://cascadeclean.com/en-us/create-profile");
 		        
 		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
 		        
