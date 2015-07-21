@@ -29,6 +29,7 @@ import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -265,7 +266,7 @@ public class DawnDesktopLoginProduction {
 		        counter+=1;
 			    
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_anchrContinue")).click();
+		      //  driver.findElement(By.id("phdesktopheader_0_phdesktopheadertop_2_anchrContinue")).click();
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -298,9 +299,10 @@ public class DawnDesktopLoginProduction {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        WebDriverWait wait = new WebDriverWait(driver, 35);
 		        driver.findElement(By.id("phdesktopbody_0_LoginSubmitBtn")).click();
 		        
-		        
+		       
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
