@@ -162,7 +162,7 @@ public class DawnDesktopAddCartProduction {
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		          driver.get("http://int.author.dawn.pgsitecore.com/en-us/shopping-cart");
+		          driver.get("http://dawn-dish.com/en-us//shopping-cart");
 			     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
