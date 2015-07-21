@@ -44,12 +44,12 @@ public class DawnDesktopLoginProduction {
 	 
 	 public static final String USERNAME = "zaqwsx1";
 	  public static final String AUTOMATE_KEY = "Fs54nwmULt7BaSTosZxi";
-	  public static final String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+	  public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 	 
 	 
 	  public String browser_type;
 	  public String fail,error,url,rotate;
-	  public String baseUrl = "http://uat.charmin.com/en-us";
+	  public String baseUrl = "https://uat.charmin.com/en-us";
 	  
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
@@ -58,7 +58,7 @@ public class DawnDesktopLoginProduction {
 		String data2="" + local + "/" + "dawn.csv";	
 		String myTitle;
 		String csvFileToRead;
-	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads1";
+	    String safe = "https://10.10.10.34:8080/job/TESTNG3/ws/PageLoads1";
 	  @Test(groups = {"create"})
 		@Parameters({"browser"})
 	  @BeforeClass
@@ -137,7 +137,7 @@ public class DawnDesktopLoginProduction {
 		     
 		        
 		        
-		        driver.get("http://dawn-dish.com/en-us/createprofilepage");
+		        driver.get("https://dawn-dish.com/en-us/createprofilepage");
 		        
 		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
 		        
@@ -189,7 +189,7 @@ public class DawnDesktopLoginProduction {
 		        
 		        counter+=1;
 		        
-		        driver.get("http://dawn-dish.com/en-us/loginpage");
+		        driver.get("https://dawn-dish.com/en-us/loginpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -295,7 +295,7 @@ public class DawnDesktopLoginProduction {
 				        System.out.println("Image Name is  " +name);
 				        takeScreenPortrait(name);
 		        }
-		        driver.get("http://dawn-dish.com/en-us/resetpasswordpage");
+		        driver.get("https://dawn-dish.com/en-us/resetpasswordpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -415,7 +415,7 @@ public class DawnDesktopLoginProduction {
 	 {  
 	  
 		 System.out.println("Let me run mobileGalaxyS3");
-		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "IE");
 		 caps.setCapability("browser_version", "11.0");
@@ -431,7 +431,7 @@ public class DawnDesktopLoginProduction {
 	      browser_type="browserIE11";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://m.crest.com");
+	      driver.get("https://m.crest.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
@@ -444,7 +444,7 @@ public class DawnDesktopLoginProduction {
 	 {  
 	  
 		 System.out.println("Let me run mobileGalaxyS3");
-		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "IE");
 		 caps.setCapability("browser_version", "10.0");
@@ -458,7 +458,7 @@ public class DawnDesktopLoginProduction {
 	      browser_type="browserIE10";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://nhl.com");
+	      driver.get("https://nhl.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
@@ -471,7 +471,7 @@ public class DawnDesktopLoginProduction {
 	 {  
 	  
 		 System.out.println("Let me run mobileGalaxyS3");
-		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "Chrome");
 		 caps.setCapability("browser_version", "39.0");
@@ -485,7 +485,7 @@ public class DawnDesktopLoginProduction {
 	      browser_type="browserChrome39";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://nhl.com");
+	      driver.get("https://nhl.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      driver.manage().window().maximize();
 	      System.out.println(data);
@@ -499,7 +499,7 @@ public class DawnDesktopLoginProduction {
 	 {  
 	  
 		 System.out.println("Let me run mobileGalaxyS3");
-		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "Firefox");
 		 caps.setCapability("browser_version", "39.0");
@@ -513,7 +513,7 @@ public class DawnDesktopLoginProduction {
 	      browser_type="browserChrome39";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://nhl.com");
+	      driver.get("https://nhl.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      driver.manage().window().maximize();
 	      System.out.println(data);
