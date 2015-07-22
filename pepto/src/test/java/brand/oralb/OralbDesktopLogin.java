@@ -194,7 +194,7 @@ counter+=1;
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        
-		        Select droplist = new Select(driver.findElement(By.id("id=phdesktopbody_0_grs_consumer[birthdate][month]")));   
+		        Select droplist = new Select(driver.findElement(By.id("phdesktopbody_0_grs_consumer[birthdate][month]")));   
 		        droplist.selectByVisibleText("10");
 		        
 		        Select droplist1 = new Select(driver.findElement(By.id("phdesktopbody_0_grs_consumer[birthdate][year]")));   
