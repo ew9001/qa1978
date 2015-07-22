@@ -431,7 +431,7 @@ public class OralbDesktopLogin {
 	      browser_type="browserIE11";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("https://m.crest.com");
+	      driver.get("http://crest.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
@@ -452,6 +452,7 @@ public class OralbDesktopLogin {
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE10");
@@ -480,6 +481,7 @@ public class OralbDesktopLogin {
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("acceptSslCerts", "true");
+		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome 39 MAC OS");
 	      browser_type="browserChrome39";
@@ -508,6 +510,7 @@ public class OralbDesktopLogin {
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("acceptSslCerts", "true");
+		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Firefox  39 MAC OS");
 	      browser_type="browserChrome39";
@@ -536,6 +539,7 @@ public class OralbDesktopLogin {
 		 caps.setCapability("os_version", "Yosemite");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("chrome.switches", Arrays.asList("--ignore-certificate-errors"));
 		    driver = new RemoteWebDriver(new URL(URL), caps);
