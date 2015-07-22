@@ -137,7 +137,7 @@ public class OralbDesktopLogin {
 		     
 		        
 		        
-		        driver.get("http://int.oralb.pgsitecore.com/en-us/createprofilepage");
+		        driver.get("http://int.oralb.pgsitecore.com/en-us/create-profile");
 		        
 		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
 		        
