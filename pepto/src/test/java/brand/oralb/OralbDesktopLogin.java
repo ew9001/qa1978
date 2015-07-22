@@ -158,12 +158,12 @@ public class OralbDesktopLogin {
 		        
 		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).sendKeys("al@@");
-		        driver.findElement(By.id("showpassword")).click();
+		        //driver.findElement(By.id("showpassword")).click();
 		        
 		        
 		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).sendKeys("al@@");
-		        driver.findElement(By.id("showpassword")).click();
+		      //  driver.findElement(By.id("showpassword")).click();
 		        
 		        
 		        
@@ -172,7 +172,7 @@ public class OralbDesktopLogin {
 		        
 		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[lastname]")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[lastname]")).sendKeys("A@");
-		        driver.findElement(By.id("showpassword")).click();
+		      //  driver.findElement(By.id("showpassword")).click();
 		        
 		        
 		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
