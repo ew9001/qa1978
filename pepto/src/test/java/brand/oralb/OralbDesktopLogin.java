@@ -137,7 +137,7 @@ public class OralbDesktopLogin {
 		     
 		        
 		        
-		        driver.get("https://dawn-dish.com/en-us/createprofilepage");
+		        driver.get("http://int.oralb.pgsitecore.com/en-us/createprofilepage");
 		        
 		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
 		        
@@ -189,7 +189,7 @@ public class OralbDesktopLogin {
 		        
 		        counter+=1;
 		        
-		        driver.get("https://dawn-dish.com/en-us/loginpage");
+		        driver.get("http://int.oralb.pgsitecore.com/en-us/loginpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -295,7 +295,7 @@ public class OralbDesktopLogin {
 				        System.out.println("Image Name is  " +name);
 				        takeScreenPortrait(name);
 		        }
-		        driver.get("https://dawn-dish.com/en-us/resetpasswordpage");
+		        driver.get("http://int.oralb.pgsitecore.com/en-us/resetpasswordpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -541,7 +541,7 @@ public class OralbDesktopLogin {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
 	      driver.manage().window().maximize();
-	      driver.get("https://dawn-dish.com/en-us/resetpasswordpage");
+	      driver.get("http://int.oralb.pgsitecore.com/en-us/resetpasswordpage");
 	      driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
