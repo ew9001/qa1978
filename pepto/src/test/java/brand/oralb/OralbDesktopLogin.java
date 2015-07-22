@@ -24,11 +24,13 @@ import org.openqa.selenium.Rotatable;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.HasInputDevices;
 import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -186,6 +188,55 @@ public class OralbDesktopLogin {
 		        takeScreenLandscape(name);
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
+		        
+counter+=1;
+		        
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        
+		        Select droplist = new Select(driver.findElement(By.id("id=phdesktopbody_0_grs_consumer[birthdate][month]")));   
+		        droplist.selectByVisibleText("10");
+		        
+		        Select droplist1 = new Select(driver.findElement(By.id("phdesktopbody_0_grs_consumer[birthdate][year]")));   
+		        droplist1.selectByVisibleText("1978");
+		        
+		       
+		        
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[emails][0][address]")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[emails][0][address]")).sendKeys("albert.golubev@pkt.com");
+		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).sendKeys("zaq12wsx");
+		        //driver.findElement(By.id("showpassword")).click();
+		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).sendKeys("zaq12wsx");
+		      //  driver.findElement(By.id("showpassword")).click();
+		        
+		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[firstname]")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[firstname]")).sendKeys("Alex");
+		        
+		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[lastname]")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[lastname]")).sendKeys("QA");
+		      //  driver.findElement(By.id("showpassword")).click();
+		        
+		        
+		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
+		        
+		        
+
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
+		        System.out.println("Image Name " +name);
+		        takeScreenPortrait(name);
+		        
 		        
 		        counter+=1;
 		        
