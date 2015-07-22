@@ -215,7 +215,11 @@ counter+=1;
 		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).sendKeys("zaq12wsx");
 		      //  driver.findElement(By.id("showpassword")).click();
 		        
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[addresses][0][postalarea]")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[addresses][0][postalarea]")).sendKeys("11235");
 		        
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).clear();
+		        driver.findElement(By.id("phdesktopbody_0_grs_account[password][password]")).sendKeys("zaq12wsx");
 		        
 		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[firstname]")).clear();
 		        driver.findElement(By.id("phdesktopbody_0_grs_consumer[firstname]")).sendKeys("Alex");
