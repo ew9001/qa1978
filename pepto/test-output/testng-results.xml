@@ -2,32 +2,31 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="415" started-at="2015-06-30T15:22:31Z" finished-at="2015-06-30T15:22:32Z">
+  <suite name="Default suite" duration-ms="30" started-at="2015-07-27T20:16:17Z" finished-at="2015-07-27T20:16:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="415" started-at="2015-06-30T15:22:31Z" finished-at="2015-06-30T15:22:32Z">
+    <test name="Default test" duration-ms="30" started-at="2015-07-27T20:16:17Z" finished-at="2015-07-27T20:16:17Z">
       <class name="mobile.test.iPhoneTestRun">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:mobile.test.iPhoneTestRun@27b62aab]" name="setUp" is-config="true" duration-ms="0" started-at="2015-06-30T11:22:31Z" finished-at="2015-06-30T11:22:31Z">
-          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:mobile.test.iPhoneTestRun@635aed57]" name="setUp" is-config="true" duration-ms="0" started-at="2015-07-27T16:16:17Z" finished-at="2015-07-27T16:16:17Z">
+          <exception class="java.lang.UnsupportedClassVersionError">
             <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '2.37.0', revision: 'a7c61cbd68657e133ae96672cf995890bad2ee42', time: '2013-10-18 09:51:02'
-System info: host: 'usnycpww4300', ip: '169.254.126.133', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.5', java.version: '1.6.0_65'
-Driver info: driver.version: IPhoneDriver]]>
+              <![CDATA[io/appium/java_client/ios/IOSDriver : Unsupported major.minor version 51.0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '2.37.0', revision: 'a7c61cbd68657e133ae96672cf995890bad2ee42', time: '2013-10-18 09:51:02'
-System info: host: 'usnycpww4300', ip: '169.254.126.133', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.5', java.version: '1.6.0_65'
-Driver info: driver.version: IPhoneDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:111)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:129)
-	at org.openqa.selenium.iphone.IPhoneDriver.<init>(IPhoneDriver.java:80)
-	at org.openqa.selenium.iphone.IPhoneDriver.<init>(IPhoneDriver.java:91)
-	at org.openqa.selenium.iphone.IPhoneDriver.<init>(IPhoneDriver.java:100)
-	at mobile.test.iPhoneTestRun.setUp(iPhoneTestRun.java:16)
+              <![CDATA[java.lang.UnsupportedClassVersionError: io/appium/java_client/ios/IOSDriver : Unsupported major.minor version 51.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:637)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:621)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:141)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:283)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:58)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at mobile.test.iPhoneTestRun.setUp(iPhoneTestRun.java:39)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -52,37 +51,25 @@ Driver info: driver.version: IPhoneDriver
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: java.net.ConnectException: Connection refused
-	at java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
-	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
-	at java.net.Socket.connect(Socket.java:527)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
-	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
-	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:319)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:298)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	... 31 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          </exception> <!-- java.lang.UnsupportedClassVersionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="measurePerformance()[pri:0, instance:mobile.test.iPhoneTestRun@27b62aab]" name="measurePerformance" duration-ms="7" started-at="2015-06-30T11:22:32Z" finished-at="2015-06-30T11:22:32Z">
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:mobile.test.iPhoneTestRun@635aed57]" name="setUp" is-config="true" duration-ms="0" started-at="2015-07-27T16:16:17Z" finished-at="2015-07-27T16:16:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="measurePerformance()[pri:0, instance:mobile.test.iPhoneTestRun@635aed57]" name="measurePerformance" duration-ms="8" started-at="2015-07-27T16:16:17Z" finished-at="2015-07-27T16:16:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- measurePerformance -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mobile.test.iPhoneTestRun@27b62aab]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-06-30T11:22:32Z" finished-at="2015-06-30T11:22:32Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mobile.test.iPhoneTestRun@635aed57]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-07-27T16:16:17Z" finished-at="2015-07-27T16:16:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mobile.test.iPhoneTestRun@635aed57]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-07-27T16:16:17Z" finished-at="2015-07-27T16:16:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

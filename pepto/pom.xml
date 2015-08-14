@@ -101,6 +101,22 @@
      	<artifactId>webdriver-firefox</artifactId>
      	<version>0.9.7376</version>
      </dependency>
+     <dependency>
+	<groupId>io.appium</groupId>
+	<artifactId>java-client</artifactId>
+	<version>1.1.0</version>
+</dependency>
+     <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>2.46.0</version>
+    </dependency>
+    
+    <dependency>
+  <groupId>io.appium</groupId>
+  <artifactId>java-client</artifactId>
+  <version>3.1.0</version>
+</dependency>
   </dependencies>
 
     
