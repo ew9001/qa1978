@@ -233,7 +233,7 @@ public class MobileOralBLogin {
 	      browser_type="mobileGalaxyS4";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://crest.com");
+	      driver.get("http://www.tut.by/");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
