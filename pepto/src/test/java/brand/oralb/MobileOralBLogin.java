@@ -222,7 +222,7 @@ public class MobileOralBLogin {
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
-		 caps.setCapability("device", "Samsung Galaxy S III");
+		 caps.setCapability("device", "Samsung Galaxy S4");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("rotatable", true);
@@ -230,10 +230,10 @@ public class MobileOralBLogin {
 		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
-	      browser_type="mobileGalaxyS3";
+	      browser_type="mobileGalaxyS4";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://m.crest.com");
+	      driver.get("http://crest.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
