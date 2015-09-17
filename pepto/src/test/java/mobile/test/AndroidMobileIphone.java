@@ -36,11 +36,11 @@ public class AndroidMobileIphone {
 	  }
 	 
 	  public void run() throws Exception {
-		  String timeStamp = new SimpleDateFormat("MMdd_HHmmss").format(Calendar.getInstance().getTime());
+		  java.lang.String timeStamp = new SimpleDateFormat("MMdd_HHmmss").format(Calendar.getInstance().getTime());
 		  String local=(new java.io.File("").getAbsolutePath());
-			String data="" + local + "/" + "all_charmin_products.csv";	
+			java.lang.String data="" + local + "/" + "all_charmin_products.csv";	
 			int row=1;
-			String browser="GalaxyS3s";
+			java.lang.String browser="GalaxyS3s";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";

@@ -2,31 +2,19 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30" started-at="2015-07-27T20:16:17Z" finished-at="2015-07-27T20:16:17Z">
+  <suite name="Default suite" duration-ms="36" started-at="2015-08-20T18:59:48Z" finished-at="2015-08-20T18:59:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30" started-at="2015-07-27T20:16:17Z" finished-at="2015-07-27T20:16:17Z">
-      <class name="mobile.test.iPhoneTestRun">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:mobile.test.iPhoneTestRun@635aed57]" name="setUp" is-config="true" duration-ms="0" started-at="2015-07-27T16:16:17Z" finished-at="2015-07-27T16:16:17Z">
-          <exception class="java.lang.UnsupportedClassVersionError">
+    <test name="Default test" duration-ms="36" started-at="2015-08-20T18:59:48Z" finished-at="2015-08-20T18:59:48Z">
+      <class name="mobile.test.MobileAndroidDevice">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:mobile.test.MobileAndroidDevice@5090d8ea]" name="setUp" is-config="true" duration-ms="0" started-at="2015-08-20T14:59:48Z" finished-at="2015-08-20T14:59:48Z">
+          <exception class="java.lang.ClassCastException">
             <message>
-              <![CDATA[io/appium/java_client/ios/IOSDriver : Unsupported major.minor version 51.0]]>
+              <![CDATA[io.selendroid.standalone.android.AndroidSdk cannot be cast to org.openqa.selenium.WebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.UnsupportedClassVersionError: io/appium/java_client/ios/IOSDriver : Unsupported major.minor version 51.0
-	at java.lang.ClassLoader.defineClass1(Native Method)
-	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:637)
-	at java.lang.ClassLoader.defineClass(ClassLoader.java:621)
-	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:141)
-	at java.net.URLClassLoader.defineClass(URLClassLoader.java:283)
-	at java.net.URLClassLoader.access$000(URLClassLoader.java:58)
-	at java.net.URLClassLoader$1.run(URLClassLoader.java:197)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
-	at mobile.test.iPhoneTestRun.setUp(iPhoneTestRun.java:39)
+              <![CDATA[java.lang.ClassCastException: io.selendroid.standalone.android.AndroidSdk cannot be cast to org.openqa.selenium.WebDriver
+	at mobile.test.MobileAndroidDevice.setUp(MobileAndroidDevice.java:17)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -53,27 +41,19 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.UnsupportedClassVersionError -->
+          </exception> <!-- java.lang.ClassCastException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="setUp()[pri:0, instance:mobile.test.iPhoneTestRun@635aed57]" name="setUp" is-config="true" duration-ms="0" started-at="2015-07-27T16:16:17Z" finished-at="2015-07-27T16:16:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="measurePerformance()[pri:0, instance:mobile.test.iPhoneTestRun@635aed57]" name="measurePerformance" duration-ms="8" started-at="2015-07-27T16:16:17Z" finished-at="2015-07-27T16:16:17Z">
+        <test-method status="SKIP" signature="measurePerformance()[pri:0, instance:mobile.test.MobileAndroidDevice@5090d8ea]" name="measurePerformance" duration-ms="9" started-at="2015-08-20T14:59:48Z" finished-at="2015-08-20T14:59:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- measurePerformance -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mobile.test.iPhoneTestRun@635aed57]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-07-27T16:16:17Z" finished-at="2015-07-27T16:16:17Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mobile.test.MobileAndroidDevice@5090d8ea]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-08-20T14:59:48Z" finished-at="2015-08-20T14:59:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mobile.test.iPhoneTestRun@635aed57]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-07-27T16:16:17Z" finished-at="2015-07-27T16:16:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- mobile.test.iPhoneTestRun -->
+      </class> <!-- mobile.test.MobileAndroidDevice -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
