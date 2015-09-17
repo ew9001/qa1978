@@ -60,7 +60,7 @@ public class OralbDesktopLogin {
 		String data2="" + local + "/" + "oralb.csv";	
 		String myTitle;
 		String csvFileToRead;
-	    String safe = "https://10.10.10.34:8080/job/TESTNG3/ws/PageLoads1";
+	    String safe = "https://10.10.10.34:8080/job/TESTNG3/ws/PageLoads11";
 	  @Test(groups = {"create"})
 		@Parameters({"browser"})
 	  @BeforeClass
@@ -139,7 +139,7 @@ public class OralbDesktopLogin {
 		     
 		        
 		        
-		        driver.get("http://int.oralb.pgsitecore.com/en-us/create-profile");
+		        driver.get("http://author.oralb.pgsitecore.com/en-us/create-profile");
 		        
 		        driver.findElement(By.id("phdesktopbody_0_submit")).click();
 		        
@@ -244,7 +244,7 @@ counter+=1;
 		        
 		        counter+=1;
 		        
-		        driver.get("http://int.oralb.pgsitecore.com/en-us/loginpage");
+		        driver.get("http://author.oralb.pgsitecore.com/en-us/loginpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -350,7 +350,7 @@ counter+=1;
 				        System.out.println("Image Name is  " +name);
 				        takeScreenPortrait(name);
 		        }
-		        driver.get("http://int.oralb.pgsitecore.com/en-us/resetpasswordpage");
+		        driver.get("http://author.oralb.pgsitecore.com/en-us/resetpasswordpage");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -600,7 +600,7 @@ counter+=1;
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
 	      driver.manage().window().maximize();
-	      driver.get("http://int.oralb.pgsitecore.com/en-us/resetpasswordpage");
+	      driver.get("http://author.oralb.pgsitecore.com/en-us/resetpasswordpage");
 	      driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
