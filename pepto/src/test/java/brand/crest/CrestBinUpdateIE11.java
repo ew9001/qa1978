@@ -16,9 +16,11 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Rotatable;
 import org.openqa.selenium.ScreenOrientation;
@@ -48,7 +50,8 @@ public class CrestBinUpdateIE11 {
 	  public static final String AUTOMATE_KEY = "Fs54nwmULt7BaSTosZxi";
 	  public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 	 
-	 
+	  public int i = 0;
+	  public int k =0;
 	  public String browser_type;
 	  public String fail,error,url,rotate;
 	  public String baseUrl = "https://uat.charmin.com/en-us";
@@ -166,12 +169,36 @@ public class CrestBinUpdateIE11 {
 		        
 		        counter+=1;
 		        
+		        
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        i=0;
+		        while (i != 2) { 
 		        
-		        
-		        
-		        
+		        if(driver.findElement(By.id("e13")).isDisplayed())
+		        { 
+		        	i=1;
+		        	k+=1;
+		        	 System.out.println("Found a  > key ");
+		        	 
+		        	 name=""+ browser+"/portrait/" + browser +"_"+ k + "_" + "Successful-Pressed key.png";
+				        takeScreenPortrait(name);
+				        System.out.println("Image Name " +name);
+				        name=""+ browser+"/landscape/" + browser +"_"+ k + "_" + "Successful-Completed-Capture-landscape.png";
+				        takeScreenLandscape(name);
+				        System.out.println("Image Name " +name);
+				        takeScreenPortrait(name);
+		        }
+		        else
+		        {
+		        	i=2;
+		        	
+		        	 System.out.println("Moving to next product ");
+		        }
+		     
+		        }
 		    
 
 		      }
