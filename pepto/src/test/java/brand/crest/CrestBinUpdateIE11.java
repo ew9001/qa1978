@@ -177,7 +177,7 @@ public class CrestBinUpdateIE11 {
 		        i=0;
 		        while (i != 2) { 
 		        	  
-		        if(driver.findElement(By.cssSelector("div[class=\"right ub_ lb_ s_\"]")).isDisplayed())
+		        if(driver.findElement(By.cssSelector("span.right ub_ lb_ s_")).isDisplayed())
 		        { 
 		        	i=1;
 		        	k+=1;
