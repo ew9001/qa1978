@@ -176,7 +176,7 @@ public class CrestBinUpdateIE11 {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        i=0;
 		        
-		        driver.findElement(By.cssSelector("span[id=\"#e1\"]")).click();
+		        driver.findElement(By.cssSelector("div[id=\"#e1\"]")).click();
 		        while (i != 2) { 
 		        	  
 		        if(driver.findElement(By.cssSelector(".right ub_ lb_ s_")).isDisplayed())
