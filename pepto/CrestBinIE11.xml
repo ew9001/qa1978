@@ -5,7 +5,7 @@
     
     
     
-    <test name="Print on browser Firefox">
+    <test name="Bin 2.0 Test On browser Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="brand.crest.CrestBinUpdateIE11"/>
@@ -18,7 +18,7 @@
         </groups>
     </test>
     
-    <test name="Print on browser  IE10">
+    <test name="Bin 2.0 Test On browser  IE10">
         <parameter name="browser" value="browserIE10"/>
         <classes>
             <class name="brand.crest.CrestBinUpdateIE11"/>
@@ -31,7 +31,35 @@
         </groups>
     </test>
     
-    <test name="Print on browser IE11">
+    
+     <test name="Bin 2.0 Test On browser  Safari">
+        <parameter name="browser" value="safari"/>
+        <classes>
+            <class name="brand.crest.CrestBinUpdateIE11"/>
+        </classes>
+ 
+        <groups>
+            <run>
+                <include name="create"/>
+            </run>
+        </groups>
+    </test>
+    
+     <test name="Bin 2.0 Test On browser  Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="brand.crest.CrestBinUpdateIE11"/>
+        </classes>
+ 
+        <groups>
+            <run>
+                <include name="create"/>
+            </run>
+        </groups>
+    </test>
+    
+    
+    <test name="Bin 2.0 Test On browser IE11">
         <parameter name="browser" value="browserIE11"/>
         <classes>
             <class name="brand.crest.CrestBinUpdateIE11"/>

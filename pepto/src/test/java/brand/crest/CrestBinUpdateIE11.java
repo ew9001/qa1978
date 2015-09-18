@@ -74,7 +74,7 @@ public class CrestBinUpdateIE11 {
 			  csvFileToRead = data2;
 			}
 		  
-		  else if (browser.equals("Chrome")) {
+		  else if (browser.equals("chrome")) {
 			  driver=browserChrome();
 			  csvFileToRead = data2;
 			}
