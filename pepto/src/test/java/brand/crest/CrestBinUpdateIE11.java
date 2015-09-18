@@ -176,31 +176,31 @@ public class CrestBinUpdateIE11 {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        i=0;
 		        
-		        driver.findElement(By.cssSelector("div[id=\"e1\"]")).click();
-		        while (i != 2) { 
+		        //driver.findElement(By.cssSelector("div[id=\"e1\"]")).click();
+		        //while (i != 2) { 
 		        	  
-		        if(driver.findElement(By.cssSelector(".right ub_ lb_ s_")).isDisplayed())
-		        { 
-		        	i=1;
-		        	k+=1;
-		        	 System.out.println("Found a  > key ");
+		        //if(driver.findElement(By.cssSelector(".right ub_ lb_ s_")).isDisplayed())
+		        //{ 
+		        //	i=1;
+		        	//k+=1;
+		        	 //System.out.println("Found a  > key ");
 		        	 
-		        	 name=""+ browser+"/portrait/" + browser +"_"+ k + "_" + "Successful-Pressed key.png";
-				        takeScreenPortrait(name);
-				        System.out.println("Image Name " +name);
-				        name=""+ browser+"/landscape/" + browser +"_"+ k + "_" + "Successful-Completed-Capture-landscape.png";
-				        takeScreenLandscape(name);
-				        System.out.println("Image Name " +name);
-				        takeScreenPortrait(name);
-		        }
-		        else
-		        {
-		        	i=2;
+		        //	 name=""+ browser+"/portrait/" + browser +"_"+ k + "_" + "Successful-Pressed key.png";
+				  //      takeScreenPortrait(name);
+				    //    System.out.println("Image Name " +name);
+				      //  name=""+ browser+"/landscape/" + browser +"_"+ k + "_" + "Successful-Completed-Capture-landscape.png";
+				       // takeScreenLandscape(name);
+				       // System.out.println("Image Name " +name);
+				       // takeScreenPortrait(name);
+		       // }
+		       // else
+		        //{
+		       // 	i=2;
 		        	
-		        	 System.out.println("Moving to next product ");
-		        }
+		       // 	 System.out.println("Moving to next product ");
+		       // }
 		     
-		        }
+		    //    }
 		    
 
 		      }
