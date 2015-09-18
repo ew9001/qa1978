@@ -177,7 +177,7 @@ public class CrestBinUpdateIE11 {
 		        i=0;
 		        while (i != 2) { 
 		        	  
-		        if(driver.findElement(By.partialLinkText("#e")).isDisplayed())
+		        if(driver.findElement(By.xpath("//img[@src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAXElEQVQ4y2P4//8/A7Uxw6ihuCUZGAyA+D6UxgDkGgoyEMR4j81gSlz6HpfB5BqK12BKDMVpMKWGYjWYGoaCQALUUBC+PyhdSvUwpXrs0ySd0ixHUTfvjxbSZGEA/QcU5yLp498AAAAASUVORK5CYII=']")).isDisplayed())
 		        { 
 		        	i=1;
 		        	k+=1;
