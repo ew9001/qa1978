@@ -5,7 +5,7 @@
     
     
     
-    <test name="Bin Test On browser Firefox">
+    <test name="Print on browser Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="brand.pepto.PeptoBinDesktop"/>
@@ -18,7 +18,7 @@
         </groups>
     </test>
     
-    <test name="Bin Test On browser  IE10">
+    <test name="Print on browser  IE10">
         <parameter name="browser" value="browserIE10"/>
         <classes>
             <class name="brand.pepto.PeptoBinDesktop"/>
@@ -31,35 +31,7 @@
         </groups>
     </test>
     
-    
-     <test name="Bin Test On browser  Safari">
-        <parameter name="browser" value="safari"/>
-        <classes>
-            <class name="brand.pepto.PeptoBinDesktop"/>
-        </classes>
- 
-        <groups>
-            <run>
-                <include name="create"/>
-            </run>
-        </groups>
-    </test>
-    
-     <test name="Bin Test On browser  Chrome">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="brand.pepto.PeptoBinDesktop"/>
-        </classes>
- 
-        <groups>
-            <run>
-                <include name="create"/>
-            </run>
-        </groups>
-    </test>
-    
-    
-    <test name="Bin Test On browser IE11">
+     <test name="Print on browser  IE11">
         <parameter name="browser" value="browserIE11"/>
         <classes>
             <class name="brand.pepto.PeptoBinDesktop"/>
@@ -72,5 +44,28 @@
         </groups>
     </test>
     
+      <test name="Print on browser  Safari">
+        <parameter name="browser" value="safari"/>
+        <classes>
+            <class name="brand.pepto.PeptoBinDesktop"/>
+        </classes>
+ 
+        <groups>
+            <run>
+                <include name="create"/>
+            </run>
+        </groups>
+    </test>
     
-</suite>
+       <test name="Print on browser  Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="brand.pepto.PeptoBinDesktop"/>
+        </classes>
+ 
+        <groups>
+            <run>
+                <include name="create"/>
+            </run>
+        </groups>
+    </test>
