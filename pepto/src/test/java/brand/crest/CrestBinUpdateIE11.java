@@ -177,7 +177,7 @@ public class CrestBinUpdateIE11 {
 		        i=0;
 		        while (i != 2) { 
 		        	  
-		        if(driver.findElement(By.cssSelector("#e14 > img.vb_")).isDisplayed())
+		        if(driver.findElement(By.cssSelector("div[id=\"#e\"]")).isDisplayed())
 		        { 
 		        	i=1;
 		        	k+=1;
