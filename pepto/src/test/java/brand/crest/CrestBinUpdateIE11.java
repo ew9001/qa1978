@@ -176,8 +176,8 @@ public class CrestBinUpdateIE11 {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        i=0;
 		        while (i != 2) { 
-		        
-		        if(driver.findElement(By.id("e13")).isDisplayed())
+		        	  
+		        if(driver.findElement(By.partialLinkText("#e")).isDisplayed())
 		        { 
 		        	i=1;
 		        	k+=1;
