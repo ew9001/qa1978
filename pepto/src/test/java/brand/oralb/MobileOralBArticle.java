@@ -169,7 +169,7 @@ public class MobileOralBArticle {
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Samsung Galaxy S5");
 		 caps.setCapability("browserstack.debug", "true");
-		 //caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("rotatable", true);
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("deviceOrientation", "landscape");
