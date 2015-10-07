@@ -57,8 +57,8 @@ public class MobileOralBArticle {
 	  {	   
 		  
 		  
-		  if (browser.equals("mobileGalaxyS3")) {
-			  driver=mobileGalaxyS3();
+		  if (browser.equals("mobileGalaxyS5")) {
+			  driver=mobileGalaxyS5();
 			  csvFileToRead = data;
 			  
 			}
@@ -159,26 +159,26 @@ public class MobileOralBArticle {
 
 	
 	 
-	 public WebDriver mobileGalaxyS3() throws MalformedURLException  
+	 public WebDriver mobileGalaxyS5() throws MalformedURLException  
 	 {  
 	  
-		 System.out.println("Let me run mobileGalaxyS3");
+		 System.out.println("Let me run mobileGalaxyS5");
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Samsung Galaxy S5");
 		 caps.setCapability("browserstack.debug", "true");
-		 caps.setCapability("browserstack.local", "true");
+		 //caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("rotatable", true);
 		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
-	      browser_type="mobileGalaxyS4";
+	      browser_type="mobileGalaxyS3";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://www.tut.by/");
+	      driver.get("http://dawn-dish.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
@@ -186,7 +186,6 @@ public class MobileOralBArticle {
 	    
 	      
 	 } 
-	 
 	
 
 	 
