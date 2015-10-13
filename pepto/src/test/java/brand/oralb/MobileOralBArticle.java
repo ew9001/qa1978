@@ -45,8 +45,8 @@ public class MobileOralBArticle {
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "product.csv";	
-		String data2="" + local + "/" + "product.csv";	
+		String data="" + local + "/" + "product1.csv";	
+		String data2="" + local + "/" + "product1.csv";	
 		String myTitle;
 		String csvFileToRead;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
