@@ -66,7 +66,7 @@ public class MobileOralBArticle {
 
 		 
 		  
-		  String name=""+ browser+"/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
+		  String name=""+ browser+"/" + browser +"_"+ counter + "_" + ".png";
 		 
 			  System.out.println("Let me see which one get tested " +browser);
 			  System.out.println("Image Name " +name);
