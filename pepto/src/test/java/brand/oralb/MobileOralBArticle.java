@@ -208,6 +208,9 @@ public class MobileOralBArticle {
 		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
