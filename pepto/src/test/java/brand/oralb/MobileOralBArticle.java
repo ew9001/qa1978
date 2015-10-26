@@ -119,7 +119,7 @@ public class MobileOralBArticle {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        //driver.findElement(By.linkText("LOGIN")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "screen.png";
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "view_screen.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
 		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "landscape.png";
