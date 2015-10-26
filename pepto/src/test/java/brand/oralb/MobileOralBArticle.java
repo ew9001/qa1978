@@ -45,8 +45,8 @@ public class MobileOralBArticle {
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "product1.csv";	
-		String data2="" + local + "/" + "product1.csv";	
+		String data="" + local + "/" + "product2.csv";	
+		String data2="" + local + "/" + "product12.csv";	
 		String myTitle;
 		String csvFileToRead;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
@@ -119,10 +119,10 @@ public class MobileOralBArticle {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        //driver.findElement(By.linkText("LOGIN")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "screen.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "landscape.png";
 		        takeScreenLandscape(name);
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
